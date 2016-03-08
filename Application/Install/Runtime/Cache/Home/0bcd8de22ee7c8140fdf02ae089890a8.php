@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <title>成都中亚通茂科技有限公司</title>
-    <link rel="stylesheet" href="/Public/stylesheets/install/install.css" />
-    <script type="text/javascript" src="/Public/javascripts/install/jquery-2.1.1.js" ></script>
+    <link rel="stylesheet" href="/weixin/Public/stylesheets/install/install.css" />
+    <script type="text/javascript" src="/weixin/Public/javascripts/install/jquery-2.1.1.js" ></script>
 </head>
 <body>
     <div class="wrap">
@@ -16,7 +16,7 @@
 
         <div class="section">
             <div>
-    <div class="success_tip cc"> <a href="/admin.php" class="f16 b">安装完成，进入后台管理</a>
+    <div class="success_tip cc"> <a href="/weixin/admin.php" class="f16 b">安装完成，进入后台管理</a>
    </div>
     <div class=""> </div>
 </div>

@@ -166,21 +166,9 @@ private function selectDb($dbName) {
 
         $admin['password'] = $this->encrypt($admin['password']);
 
-        $sqlr = "INSERT INTO `{$this->tablePrefix}admin` (`id`, `role_id`, `email`, `password`, `remark`, `is_super`, `is_active`, `mail_hash`, `last_login_at`, `created_at`, `updated_at`) VALUES(1, 1, '{$admin['email']}', '{$admin['password']}', '超级管理员', 1, 1, '', UNIX_TIMESTAMP(), UNIX_TIMESTAMP(), UNIX_TIMESTAMP());";
-
-        
-		$sql = "INSERT INTO `{$this->tablePrefix}manageUser` (`manage_name` ,`manage_role` , `manage_email` , `manage_passwd`,`manage_create_data`,`manage_id`, `manage_updata_data`) VALUES ('admin',0,'{$admin['emaill']}','{$admin['password']},UNIX_TIMESTAMP(),UNIX_TIMESTAMP())";
-		
-		//$sql = "INSERT INTO `{$this->tablePrefix}manageUser` (`manage_name` ,`manage_role`,`manage_email`,`manage_passwd`,`manage_create_data`,`manage_id`,`manage_updata_data`) VALUES ('admin',0, '{$admin['email']}','$admin['password']',UNIX_TIMESTAMP(),UNIX_TIMESTAMP());";
-        //$raSql = "INSERT INTO `{$this->tablePrefix}role_admin` (`role_id`, `user_id`) VALUES(1, 1);";
-
-        
-        if(!mysql_query($sql))
- 		$this->ajaxReturn(array('CreateTableValue' => 999999,
-                              'info' => $sqlr));	
-        
-        
-        //mysql_query($raSql);
+        $sql = "INSERT INTO `{$this->tablePrefix}manageUser` (`manage_id`, `manage_role`, `manage_email`, `manage_passwd`, `manage_name`, `manage_update_date`, `manage_create_date`) VALUES(1, 0, '{$admin['email']}', '{$admin['password']}', 'admin', UNIX_TIMESTAMP(), UNIX_TIMESTAMP());";
+		      
+        mysql_query($sql);
     }
     /**
      * 写入配置

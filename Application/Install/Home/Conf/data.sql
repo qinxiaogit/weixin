@@ -6,9 +6,9 @@ CREATE TABLE `zytm_manageUser` (
 	`manage_role` int	  NOT NULL  DEFAULT '0' COMMENT '权限',
 	`manage_email` varchar(30) NOT NULL COMMENT 'email',
 	`manage_passwd` varchar(20) NOT NULL COMMENT '密码',
-	`manage_created_data`  int(11) NOT NULL DEFAULT '0' COMMENT '创建时间',
+	`manage_create_date`  int(11) NOT NULL DEFAULT '0' COMMENT '创建时间',
 	`manage_id`	int(11)    NOT NULL  AUTO_INCREMENT COMMENT '用户ID',
-    `manage_updated_data`  int(11) NOT NULL DEFAULT '0' COMMENT '上次登录时间', 
+    `manage_update_date`  int(11) NOT NULL DEFAULT '0' COMMENT '上次登录时间', 
      PRIMARY KEY (`manage_id`)  
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='管理员信息表' AUTO_INCREMENT=0 ;
 

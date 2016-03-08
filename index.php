@@ -18,7 +18,13 @@ if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 define('WEB_ROOT', dirname(__FILE__) . '/');
 
 // 定义应用目录
-define('APP_NAME', 'Homde');
+//define('APP_PATH', './Application/Install/');
+
+
+// 定义应用目录
+define('APP_NAME', 'Home');
+// 绑定index模块到当前入口文件
+define('BIND_MODULE','Home');
 define('APP_PATH', './Application/Home/');
 define('THINK_PATH', realpath('./ThinkPHP') . '/');
 

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <title>成都中亚通茂科技有限公司</title>
-    <link rel="stylesheet" href="/Public/stylesheets/install/install.css" />
-    <script type="text/javascript" src="/Public/javascripts/install/jquery-2.1.1.js" ></script>
+    <link rel="stylesheet" href="/weixin/Public/stylesheets/install/install.css" />
+    <script type="text/javascript" src="/weixin/Public/javascripts/install/jquery-2.1.1.js" ></script>
 </head>
 <body>
     <div class="wrap">
@@ -27,7 +27,7 @@
 </div>
 
 <div class="bottom tac">
-    <a href="javascript:;" class="btn_old"><img src="/Public/images/install/loading.gif" align="absmiddle" />&nbsp;正在安装...</a>
+    <a href="javascript:;" class="btn_old"><img src="/weixin/Public/images/install/loading.gif" align="absmiddle" />&nbsp;正在安装...</a>
 </div>
 <script type="text/javascript" >
 
@@ -45,6 +45,8 @@ function requestInstallStation(CreateTableValue){
 		success:function(callbackData){
 			
 			 console.log(callbackData);
+			 
+			 //alert(callbackData.info);
 			 if(callbackData.CreateTableValue == '999999'){
                 // $('#dosubmit').attr("disabled", false);
                 // $('#dosubmit').removeAttr("disabled");
@@ -69,12 +71,12 @@ function requestInstallStation(CreateTableValue){
 	
 	// 安装完成，跳转到5步
 function gonext(){
-    //window.location.href="<?php echo U('Installed/complete');?>";
+    window.location.href="<?php echo U('Installed/complete');?>";
 }
 	
 </script>
 
-<script type="text/javascript" src="/Public/javascripts/install/installed.js" ></script>
+<script type="text/javascript" src="/weixin/Public/javascripts/install/installed.js" ></script>
         </div>
     </div>
     <div class="footer"> &copy; 2016.

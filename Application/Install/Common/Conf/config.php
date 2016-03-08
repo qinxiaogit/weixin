@@ -11,7 +11,7 @@ return array(
 	'SYSTEM_SQL_PATH'=>WEB_ROOT.'Application/Install/Home/Conf/data.sql',
     // 默认模块
     'MODULE_ALLOW_LIST' => array('Install'),
-    'DEFAULT_MODULE' => 'Home',
+    'DEFAULT_MODULE' => 'Install',
 
     // 开启布局
     'LAYOUT_ON' => true,

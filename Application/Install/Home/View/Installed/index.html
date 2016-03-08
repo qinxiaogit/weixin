@@ -28,6 +28,8 @@ function requestInstallStation(CreateTableValue){
 		success:function(callbackData){
 			
 			 console.log(callbackData);
+			 
+			 //alert(callbackData.info);
 			 if(callbackData.CreateTableValue == '999999'){
                 // $('#dosubmit').attr("disabled", false);
                 // $('#dosubmit').removeAttr("disabled");
@@ -52,7 +54,7 @@ function requestInstallStation(CreateTableValue){
 	
 	// 安装完成，跳转到5步
 function gonext(){
-    //window.location.href="{:U('Installed/complete')}";
+    window.location.href="{:U('Installed/complete')}";
 }
 	
 </script>

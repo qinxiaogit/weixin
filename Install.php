@@ -26,7 +26,7 @@ define('APP_DEBUG', true);
 //define('DIR_SECURE_FILENAME','default.html');
 
 //不希望生成安全目录
-define('BUILD_DIR_SECURE',false);
+//define('BUILD_DIR_SECURE',TRUE);
 
 // 定义应用目录
 define('APP_PATH', './Application/Install/');
