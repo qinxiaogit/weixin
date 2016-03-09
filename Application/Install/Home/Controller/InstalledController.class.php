@@ -166,7 +166,7 @@ private function selectDb($dbName) {
 
         $admin['password'] = $this->encrypt($admin['password']);
 
-        $sql = "INSERT INTO `{$this->tablePrefix}manageUser` (`manage_id`, `manage_role`, `manage_email`, `manage_passwd`, `manage_name`, `manage_update_date`, `manage_create_date`) VALUES(1, 0, '{$admin['email']}', '{$admin['password']}', 'admin', UNIX_TIMESTAMP(), UNIX_TIMESTAMP());";
+        $sql = "INSERT INTO `{$this->tablePrefix}manage_user` (`manage_id`, `manage_role`, `manage_email`, `manage_passwd`, `manage_name`, `manage_update_date`, `manage_create_date`) VALUES(1, 0, '{$admin['email']}', '{$admin['password']}', 'admin', UNIX_TIMESTAMP(), UNIX_TIMESTAMP());";
 		      
         mysql_query($sql);
     }

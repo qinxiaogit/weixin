@@ -25,10 +25,8 @@ function requestInstallStation(CreateTableValue){
 		dataType:"json",
 		data:data,
 		beforeSend:function(){},
-		success:function(callbackData){
-			
-			 console.log(callbackData);
-			 
+		success:function(callbackData){	
+			 //console.log(callbackData);	 
 			 //alert(callbackData.info);
 			 if(callbackData.CreateTableValue == '999999'){
                 // $('#dosubmit').attr("disabled", false);

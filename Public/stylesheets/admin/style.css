@@ -42,7 +42,14 @@ body {
 	margin-bottom: 5px;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
-  width: 40%;
+  width: 50%;
+  display: inline;
+}
+.form-signin button{
+	margin-bottom: 5px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  width: 48%;
   display: inline;
 }
 
@@ -50,7 +57,7 @@ body {
 	margin-bottom: 5px;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;	
-	width: 60%;
+	width: 200px;
 	height: 100px;
 	display: inline;
 	background: red;

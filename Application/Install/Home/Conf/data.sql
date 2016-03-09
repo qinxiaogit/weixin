@@ -1,7 +1,7 @@
 #数据表:管理员用户表—结构信息
 DROP TABLE IF  EXISTS `zytm_manageUser`;
 
-CREATE TABLE `zytm_manageUser` (
+CREATE TABLE `zytm_manage_user` (
 	`manage_name` varchar(10) NOT NULL  COMMENT 'name',
 	`manage_role` int	  NOT NULL  DEFAULT '0' COMMENT '权限',
 	`manage_email` varchar(30) NOT NULL COMMENT 'email',

@@ -1624,7 +1624,7 @@ class Model
 
         return $this;
     }
-    // 数据库切换后回调方法
+    //数据库切换后回调方法
     protected function _after_db()
     {}
 
