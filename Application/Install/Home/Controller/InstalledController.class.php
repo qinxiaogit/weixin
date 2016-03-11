@@ -227,7 +227,7 @@ private function selectDb($dbName) {
      * @return string
      */
     private function encrypt($data) {
-        return md5($this->AUTH_MASK . md5($data));
+        return md5(md5($data));
     }
     
    /**安装完成* @return*/

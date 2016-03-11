@@ -1,9 +1,8 @@
 <?php
-namespace Home\Controller;
 
-use Think\Controller;
+namespace Home\Controller;;
 
-class UserController extends Controller{
+class UserController extends CommonController{
 	
 	public function Index(){
 		

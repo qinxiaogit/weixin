@@ -1,7 +1,8 @@
 <?php 
 namespace Home\Model;
+use \Think\Model;
 
-class UserModel	extends Model{
+class ManageUserModel	extends Model{
 	public function AddUser(){
 		
 		
