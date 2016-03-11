@@ -1,5 +1,5 @@
 #数据表:管理员用户表—结构信息
-DROP TABLE IF  EXISTS `zytm_manageUser`;
+DROP TABLE IF  EXISTS `zytm_manage_user`;
 
 CREATE TABLE `zytm_manage_user` (
 	`manage_name` varchar(10) NOT NULL  COMMENT 'name',
@@ -16,7 +16,7 @@ CREATE TABLE `zytm_manage_user` (
 #产品表:公司产品表
 DROP TABLE IF EXISTS `zytm_goods`;
 
-CREATE TABLE  `zytm_goods` (
+CREATE TABLE `zytm_goods` (
 	`goods_prev_id` int(11)  NOT NULL COMMENT '隶属于产品编码', 
 	`goods_name` varchar(20) NOT NULL COMMENT '产品名称`',
 	`goods_id`   int(11)	 NOT NULL DEFAULT '0' COMMENT  '产品编号',

@@ -24,6 +24,9 @@ class IndexController extends Controller
 	public function CheckLoginfo(){
 		if(CheckVerify()){//验证码验证成功
 			
+		$user = D('ManageUser');
+		$loginUserInfo = $user->where("manage_email = I('post.login_email')")->select(); 	
+			
 			
 		}else{
 			$this->error('验证码错误',U('Home/Index/'),2);

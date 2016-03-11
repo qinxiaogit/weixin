@@ -10,8 +10,9 @@ return array(
     // 开启布局
     'LAYOUT_ON' => true,
     'LAYOUT_NAME' => 'Common/layout'   ,
-     //数据库脚本路径
+    //数据库脚本路径
     //默认主键
-    'DEFAULT_TABLE_PREFIX'=>'zytm_'
-    // 默认模块
-);
+    'DEFAULT_TABLE_PREFIX'=>'zytm_',
+    // 默认模块 
+    'SYSTEM_CONFIG_PATH' => WEB_ROOT.'Application/Admin/Home/Conf/InstallInfo.php'
+	);
