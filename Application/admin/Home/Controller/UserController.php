@@ -1,6 +1,6 @@
 <?php
 
-namespace Home\Controller;;
+namespace Home\Controller;
 
 class UserController extends CommonController{
 	

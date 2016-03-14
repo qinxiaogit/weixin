@@ -1,12 +1,14 @@
 <?php
 namespace Home\Controller;
-
-class IndexController extends CommonController
+use Think\Controller;
+class IndexController extends Controller
 {
     public function index()
     {
     	$this->display();    
 	}
+
+	//验证码操作
 	public function Verify(){  
     	$Verify = new \Think\Verify();  
     	$Verify->fontSize = 18;  
@@ -20,35 +22,23 @@ class IndexController extends CommonController
 	}
 	 
 	public function CheckLoginfo(){
-		if(CheckVerify()){//验证码验证成功
-			
-		$user = D('ManageUser');
-		$login_email = I('post.login_email');
+		if(CheckVerify()){//验证码验证成功		
+		//检测用户名和密码
+		$UserName = I('post.login_email');
+		$UserPasswd = md5(md5(I('post.login_passwd')));
 		
-		$loginUserInfo = $user->where("manage_email = '$login_email'")->select(); 	
+		if(CheckUserInfo($UserName,$UserPasswd)){
+			$this->success('登录成功',U('Home/Home/'),1);
+			cookie('UserName',$UserName);
+			cookie('UserPasswd',$UserPasswd);
 			
-		//print_r($loginUserInfo);	
-		
-		if(array_key_exists('manage_email',$loginUserInfo[0])){
-				
-			$passwd = md5(md5(I('post.login_passwd')));
-			
-			echo $passwd.'<br>';
-			echo $loginUserInfo[0]['manage_passwd'].'<br>';
-			print_r($loginUserInfo[0]);
-			
-			
-			if($passwd==$loginUserInfo[0]['manage_passwd']){
-				$this->error('登录成功',U('Home/Home/'),2);
-			}else{
-				$this->error('密码错误',U('Home/Index/'),2);
+		}else{	
+				$this->error('密码错误',U('Home/Index/'),1);
 			}
 		}else{
-			
-			$this->error('用户不存在',U('Home/Index/'),2);
-		 }
-		}else{
-			$this->error('验证码错误',U('Home/Index/'),2);
+			$this->error('验证码错误',U('Home/Index/'),1);
 		}	
 	}
+	
+	
 }
