@@ -12,7 +12,8 @@
 	<body>
     
 
-       <div class="container">
+       <div class="my-bg">
+   <div class="container">
 
       <form class="form-signin"  method="post" action="<?php echo U('Home/Index/CheckLoginfo');?>">
         <h2 class="form-signin-heading text-center">中亚微信后台管理</h2>
@@ -25,7 +26,9 @@
         <button class="form-control btn-primary" type="submit">登录</button>
         <button class="form-control btn-primary" >忘记密码</button>
       </form>
- </div> <!-- /container -->     
+	 </div> <!-- /container -->
+ </div>
+      
     
     <script type="text/javascript" src="/weixin/Public/javascripts/admin/admin.js" ></script>
 </body>

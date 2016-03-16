@@ -1,8 +1,5 @@
 <?php
 $install = array(
-	//'配置项'=>'配置值'
-	'MODULE_ALLOW_LIST' => array('Home','Install','Admin'),
-    'DEFAULT_MODULE' => 'Home',
        // error，success跳转页面
 
         // 开启布局

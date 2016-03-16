@@ -5,7 +5,12 @@
 		
 		public function Index(){
 			
-			echo "欢迎来到微信后台。";
+			$this->display();
+		}
+		//查询产品大类---》反馈产品新信
+		private function CheckProduct(){
+			
+			
 		}
 		
 		

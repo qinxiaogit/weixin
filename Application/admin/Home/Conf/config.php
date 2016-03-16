@@ -9,6 +9,7 @@ $config =  array(
         // 开启布局
     'LAYOUT_ON' => true,
     'LAYOUT_NAME' => 'Common/layout',
+    'COMPARE_NAME'=>'成都中亚通茂科技有限公司',
 );
 
 $install = include('InstallInfo.php');
