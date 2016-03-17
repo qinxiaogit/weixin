@@ -10,12 +10,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
-    
-
-       <div class="my-bg">
-   <div class="container">
-
-      <form class="form-signin"  method="post" action="<?php echo U('Home/Index/CheckLoginfo');?>">
+    <div class="my-bg">
+      <div class="container container-fluid">
+       <form class="form-signin"  method="post" action="<?php echo U('Home/Index/CheckLoginfo');?>">
         <h2 class="form-signin-heading text-center">中亚微信后台管理</h2>
         <label for="inputEmail" class="sr-only">email</label>
         <input type="email" id="inputEmail" name="login_email"  class="form-control" placeholder="Email address" required autofocus>
@@ -25,11 +22,9 @@
         <img width="48%" id="yzm" class="left15" height="50" alt="验证码" src="<?php echo U('Home/Index/Verify',array());?>" title="点击刷新">
         <button class="form-control btn-primary" type="submit">登录</button>
         <button class="form-control btn-primary" >忘记密码</button>
-      </form>
-	 </div> <!-- /container -->
+       </form>
+	</div> <!-- /container -->
  </div>
-      
-    
     <script type="text/javascript" src="/weixin/Public/javascripts/admin/admin.js" ></script>
 </body>
 </html>

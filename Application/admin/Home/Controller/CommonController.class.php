@@ -20,7 +20,27 @@
         		 header('Content-Type: text/html; charset=UTF-8');
 				if(!$this->CheckLoginState()){
 				  header("location: http://localhost/weixin/admin.php");
-				}   	 			
+				}  
+				$this->assignMenu(); 	 			
 			}
 			
-	}
+	/* 分配菜单
+     * @return
+     */
+    protected function assignMenu() {
+        $menu = $this->getMenu();
+       //$this->assign('main_menu', $menu['main_menu']);
+       
+        $this->assign('sub_menu', $menu);
+    }
+
+    /**
+     * 得到菜单
+     * @return array
+     */
+    protected function getMenu() {
+        $menu = C('MENU');
+	
+		return $menu;	
+	}		
+}

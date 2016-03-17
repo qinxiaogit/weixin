@@ -1,3 +1,7 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
 body {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -69,4 +73,82 @@ body {
 	bottom: 0px ;
 	top: 0px;
 	background: #106BAB;	
+}
+.center {
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-center {
+  text-align: center;
+}
+#Left{
+	position: absolute;
+	width:206px;
+	height: 100%;
+  background:url(../../images/admin/y-bg.gif) repeat-y 0 0px;
+	top: 40px;
+	left: 0px;
+}
+
+#Left .subMenuList { width:197px; }
+#Left .itemTitle {
+    width:197px;
+    background:url(../../images/admin/item-bg.gif) no-repeat left top;
+    padding-top: 12px;
+    line-height:36px;
+    text-indent:50px;
+}
+#main{
+		width: 85%;
+		height: 500px;
+		overflow-x:hidden;
+    overflow-y:scroll;
+    float:right;
+    position:relative;
+    padding-right: 10px;	
+}
+#Left li {
+    line-height:28px;
+    text-indent:30px;
+    border-bottom:1px solid #2d689f;
+}
+#Left li a {
+    background:url(../../images/admin/ico-y.gif) no-repeat 15px 12px;
+    color:#b9ddff;
+    display:block;
+}
+
+#imgdes{
+	float: right;
+	margin: 10px;
+	margin-top: 10px;
+}
+#imgdes span{
+	display: block;
+	text-align: center;
+}
+.table tr td{
+	border: solid black 1px;
+}
+.edithead{
+	height: 40px;
+	padding-top: 5px;
+	
+	text-align: center;
+}
+.from_div{
+	top: 30px;
+	width: 100%;
+	height: 45px;
+	display: block;
+	position: relative;
+	left: 20px;
+}
+.from_div input{
+	display: inline;
+	position: relative;
+	left: 20px;
+	height 30px;
 }

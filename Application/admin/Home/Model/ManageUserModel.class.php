@@ -15,6 +15,15 @@ class ManageUserModel	extends Model{
 		
 		
 	}
+	//获取所有用户信息
+	public function GetAllUserInfo(){
+		//拼接SQL
+		/*
+		 *   
+		 */
+		return $this->select();
+		
+	}
 	
 	
 	

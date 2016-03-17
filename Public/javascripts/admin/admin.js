@@ -9,5 +9,5 @@ $(function(){
 			$(this).attr("src",yzml.replace(/\?.*/,'')+'?'+Math.random());
 		}
 	});
-	//屏蔽页面跳转
+	
 });

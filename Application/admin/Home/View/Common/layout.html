@@ -10,9 +10,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
-    <include file="Common:header" />
-    {__CONTENT__}     
-    <include file="Common:footer" />
+		
+	 <div class="container " >
+        <!-- header -->
+        <include file="Common/header" />
+
+        <!-- main -->
+        <div class="mainBody">
+            <!-- left -->
+            <include file="Common/left" />
+            <!-- right -->
+            <div id="Right">
+                {__CONTENT__}
+            </div>
+        </div>
+        <div class="clear"></div>
+
+        <!-- footer -->
+        <include file="Common/footer" />
+    </div>
     <script type="text/javascript" src="__PUBLIC__/javascripts/admin/admin.js" ></script>
 </body>
 </html>
+
+
+

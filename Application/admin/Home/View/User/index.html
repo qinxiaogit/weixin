@@ -1,0 +1,25 @@
+<div  id='main'>
+	<table class="table">
+	<tr>
+		<td>名字</td>
+        <td>权限</td>
+        <td>邮箱</td>
+        <td>编号</td>
+		<td>创建时间</td>
+        <td>上次登录时间</td> 
+        <td>备注</td>
+	</tr>
+
+	<volist name="UserInfo" id="User">
+		<tr>
+            <td>{$User.manage_name}</td>
+            <td>{$User.manage_role}</td>
+            <td>{$User.manage_email}</td>
+            <td>{$User.manage_id}</td>            
+            <td>{$User.manage_create_date}</td>
+            <td>{$User.manage_update_date}</td>         
+            <td> <a id="editauth" href="{:U('/Home/User/EditUserInfo')}">编辑</a></a></td>
+    	</tr>
+	</volist>
+ </table>
+</div>

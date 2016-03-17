@@ -1,0 +1,41 @@
+<dic id='main'>
+	<div class="edithead">
+		编辑管理员信息
+	</div>
+	<table class="table">
+            <thead>
+              <tr>
+                <th>用户名:</th>
+                <th><input type="text" /></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>用登录密码:</th>
+                <th><input type="text" /></th>
+              </tr>
+              </tr>
+              <tr>
+                <th>权限:</th>
+                <th>
+                <select>
+					<volist name="Authlist" id="auth"></volist>
+						<option>{$auth.name}</option>
+                </select>
+                </th>
+              </tr>
+              <tr>
+                <th>备注信息:</th>
+               <th><textarea value="描述管理员权限"></textarea></th>
+              </tr>
+              <tr>
+              	<th><button class="btn btn-lg btn-primary">确认修改</button></th>
+              	<th><button class="btn btn-lg btn-primary">取消修改</button></th>
+              </tr>
+            </tbody>
+          </table>
+          
+       
+	
+	
+</dic>
