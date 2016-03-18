@@ -17,7 +17,6 @@
 
 function requestInstallStation(CreateTableValue){	
 	var data = {$data};
-	console.log(data);
 	var url = "{:U('Installed/CreateTable', array(), '')}" + "/CreateTableValue/" + CreateTableValue;
 	$.ajax({
 		type:"POST",

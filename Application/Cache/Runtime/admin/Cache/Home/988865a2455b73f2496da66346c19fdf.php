@@ -73,29 +73,58 @@
 </div>
             <!-- right -->
             <div id="Right">
-                <div  id='main'>
-	<table class="table">
-	<tr>
-		<td>名字</td>
-        <td>权限</td>
-        <td>邮箱</td>
-        <td>编号</td>
-		<td>创建时间</td>
-        <td>上次登录时间</td> 
-        <td>备注</td>
-	</tr>
+                <div id="main">
+	<div>
+	           产品类名:<input type="text" value="" style="width: 350px; height: 30px;" />
+	</div>
+	<div>
+		产品简介:<textarea value="" style="overflow:auto;" rows="5" cols="50"></textarea>
+	</div>
+	<button id="btqr" class="btn btn-primary">确认提交</button>
+	<button id='btqx' class="btn btn-primary">取消提交</button>
+</div> 
 
-	<?php if(is_array($UserInfo)): $i = 0; $__LIST__ = $UserInfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$User): $mod = ($i % 2 );++$i;?><tr>
-            <td><?php echo ($User["manage_name"]); ?></td>
-            <td><?php echo ($User["manage_role"]); ?></td>
-            <td><?php echo ($User["manage_email"]); ?></td>
-            <td><?php echo ($User["manage_id"]); ?></td>            
-            <td><?php echo ($User["manage_create_date"]); ?></td>
-            <td><?php echo ($User["manage_update_date"]); ?></td>         
-            <td> <a id="editauth" href="<?php echo U('/Home/User/EditUserInfo');?>">编辑</a></a></td>
-    	</tr><?php endforeach; endif; else: echo "" ;endif; ?>
- </table>
-</div>
+<script >
+	$(function(){
+		$('#btqr').click(function(){
+			
+			var productName = $('input').val();
+			var productDes  = $('textarea').val();
+			//var data = {"productName:"+productName+"","+"productDes:"+productDes};
+			var data=new Array();
+			data['productName'] = productName ;
+			data['productDes']  = productDes;
+			
+			var url = "<?php echo U('Home/Goods/AddProductClassToDb');?>";
+			$.ajax({
+			type:"GET",
+			url:url,
+			dataType:"json",
+			data:data,
+			beforeSend:function(){},
+			success:function(callbackData){	
+			 	alert('执行成功');
+          	 }
+			,
+		error:function(callbackData){
+			alert('执行失败');
+		}
+		
+		});
+		
+		})
+		
+		
+		
+		$('#btqx').click(function(){
+			window.location = "<?php echo U('Home/Home');?>";
+		});
+		
+	})
+	
+	
+	
+</script>
             </div>
         </div>
         <div class="clear"></div>

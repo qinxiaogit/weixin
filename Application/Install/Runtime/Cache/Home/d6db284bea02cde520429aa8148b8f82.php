@@ -34,8 +34,8 @@
 
 function requestInstallStation(CreateTableValue){	
 	var data = <?php echo ($data); ?>;
-	console.log(data);
 	var url = "<?php echo U('Installed/CreateTable', array(), '');?>" + "/CreateTableValue/" + CreateTableValue;
+	alert(url);
 	$.ajax({
 		type:"POST",
 		url:url,

@@ -18,10 +18,24 @@ DROP TABLE IF EXISTS `zytm_goods`;
 
 CREATE TABLE `zytm_goods` (
 	`goods_prev_id` int(11)  NOT NULL COMMENT '隶属于产品编码', 
-	`goods_name` varchar(20) NOT NULL COMMENT '产品名称`',
+	`goods_name` varchar(100) NOT NULL COMMENT '产品名称`',
 	`goods_id`   int(11)	 NOT NULL AUTO_INCREMENT COMMENT  '产品编号',
-	`goods_info` varchar(40) NOT NULL COMMENT '产品简介',
+	`goods_info` text NOT NULL COMMENT '产品简介',
 	`goods_image_name` varchar(40) NOT NULL COMMENT '产品图片',
 	PRIMARY KEY(`goods_id`)
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='产品信息表' AUTO_INCREMENT=0 ;
+
+#产品大类表
+DROP TABLE IF EXISTS `zytm_goods_meun`;
+CREATE TABLE `zytm_product_menu` (
+	`goods_name` varchar(100) NOT NULL COMMENT '产品名字',
+	`goods_id`   tinyint	  NOT NULL COMMENT '产品编码',
+	`goods_mainifo` varchar(100) NOT NULL COMMENT '产品简介',
+	PRIMARY KEY(`goods_id`)
+)ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='产品菜单信息表' AUTO_INCREMENT=0 ;
+
+
+
+
+
 

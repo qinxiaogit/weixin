@@ -73,29 +73,30 @@
 </div>
             <!-- right -->
             <div id="Right">
-                <div  id='main'>
+                <div id="main">
+	
 	<table class="table">
-	<tr>
-		<td>名字</td>
-        <td>权限</td>
-        <td>邮箱</td>
-        <td>编号</td>
-		<td>创建时间</td>
-        <td>上次登录时间</td> 
-        <td>备注</td>
-	</tr>
+              <tr>
+                <td>产品信息</td>
+                <td>产品简介</td>
+                <td>备注</td>
+              </tr>
+		<?php if(is_array($goodsInfo)): $i = 0; $__LIST__ = $goodsInfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$goods): $mod = ($i % 2 );++$i;?><tr>
+                <td><?php echo ($goods["goods_name"]); ?></td>
+                <td><a><?php echo ($goods["goods_info"]); ?></a></td>
+                <td><a>编辑</a></td>
+              </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+     </table>
 
-	<?php if(is_array($UserInfo)): $i = 0; $__LIST__ = $UserInfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$User): $mod = ($i % 2 );++$i;?><tr>
-            <td><?php echo ($User["manage_name"]); ?></td>
-            <td><?php echo ($User["manage_role"]); ?></td>
-            <td><?php echo ($User["manage_email"]); ?></td>
-            <td><?php echo ($User["manage_id"]); ?></td>            
-            <td><?php echo ($User["manage_create_date"]); ?></td>
-            <td><?php echo ($User["manage_update_date"]); ?></td>         
-            <td> <a id="editauth" href="<?php echo U('/Home/User/EditUserInfo');?>">编辑</a></a></td>
-    	</tr><?php endforeach; endif; else: echo "" ;endif; ?>
- </table>
+<div class="pageli">
+	<ul class="pagination"> 	
+		<li><a href="#">&laquo;</a></li>
+	 	<?php if(is_array($page)): $i = 0; $__LIST__ = $page;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$page): $mod = ($i % 2 );++$i;?><li><a><?php echo ($page); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+		  <li><a href="#">&raquo;</a></li>
+	</ul>
 </div>
+</div>
+
             </div>
         </div>
         <div class="clear"></div>

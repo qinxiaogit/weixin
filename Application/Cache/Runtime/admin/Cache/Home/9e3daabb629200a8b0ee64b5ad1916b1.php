@@ -26,7 +26,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">	
-           <?php if(is_array($sub_menu)): $i = 0; $__LIST__ = $sub_menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu_item): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U($key);?>"><?php echo ($menu_item); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+           <?php if(is_array($pro_info)): $i = 0; $__LIST__ = $pro_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu_item): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U($key);?>"><?php echo ($menu_item); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
         </ul>
            <ul class="nav navbar-nav navbar-right">
         	<li><a style="font-size: 20px;" href="#about">发布新产品</a>
@@ -95,7 +95,7 @@
                 <th>
                 <select>
 					<?php if(is_array($Authlist)): $i = 0; $__LIST__ = $Authlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$auth): $mod = ($i % 2 );++$i; endforeach; endif; else: echo "" ;endif; ?>
-						<option><?php echo ($auth["name"]); ?></option>
+						<option><?php echo ($auth["goods_name"]); ?></option>
                 </select>
                 </th>
               </tr>

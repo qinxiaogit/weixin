@@ -1,0 +1,52 @@
+<div id="main">
+	<div>
+	           产品类名:<input type="text" value="" style="width: 350px; height: 30px;" />
+	</div>
+	<div>
+		产品简介:<textarea value="" style="overflow:auto;" rows="5" cols="50"></textarea>
+	</div>
+	<button id="btqr" class="btn btn-primary">确认提交</button>
+	<button id='btqx' class="btn btn-primary">取消提交</button>
+</div> 
+
+<script >
+	$(function(){
+		$('#btqr').click(function(){
+			
+			var productName = $('input').val();
+			var productDes  = $('textarea').val();
+			//var data = {"productName:"+productName+"","+"productDes:"+productDes};
+			var data=new Array();
+			data['productName'] = productName ;
+			data['productDes']  = productDes;
+			
+			var url = "{:U('Home/Goods/AddProductClassToDb')}";
+			$.ajax({
+			type:"GET",
+			url:url,
+			dataType:"json",
+			data:data,
+			beforeSend:function(){},
+			success:function(callbackData){	
+			 	alert('执行成功');
+          	 }
+			,
+		error:function(callbackData){
+			alert('执行失败');
+		}
+		
+		});
+		
+		})
+		
+		
+		
+		$('#btqx').click(function(){
+			window.location = "{:U('Home/Home')}";
+		});
+		
+	})
+	
+	
+	
+</script>
