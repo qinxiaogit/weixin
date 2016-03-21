@@ -49,6 +49,14 @@
 		
 		$this->assign('pro_info',$data);
 	}
+	//请求信息返回
+	protected function ajaxSucceReturn($info){
+		
+		$this->ajaxReturn(array("RequstStation"=>TRUE,"RequstInfo"=>$info));
+	}
+	protected function ajaxFailReturn($info){
+		$this->ajaxReturn(array("RequstStation"=>FALSE,"RequstInfo"=>$info));
+	}
 	
 	
 		

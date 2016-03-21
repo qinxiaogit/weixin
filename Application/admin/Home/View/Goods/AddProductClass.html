@@ -15,20 +15,27 @@
 			
 			var productName = $('input').val();
 			var productDes  = $('textarea').val();
+			if(!productDes||!productName){
+				alert("产品名称或产品简介不能为空");
+				return false;
+			}
 			//var data = {"productName:"+productName+"","+"productDes:"+productDes};
-			var data=new Array();
-			data['productName'] = productName ;
-			data['productDes']  = productDes;
+			//var data=new Array();
+			
+			//data['productName'] = productName ;
+			//var data= productDes;
+			var data = {"productName":productName,"productDes":productDes};
 			
 			var url = "{:U('Home/Goods/AddProductClassToDb')}";
 			$.ajax({
-			type:"GET",
+			type:"POST",
 			url:url,
 			dataType:"json",
 			data:data,
 			beforeSend:function(){},
 			success:function(callbackData){	
-			 	alert('执行成功');
+			 	//console.log(data);
+			 	console.log(callbackData);
           	 }
 			,
 		error:function(callbackData){

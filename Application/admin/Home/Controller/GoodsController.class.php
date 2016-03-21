@@ -34,7 +34,17 @@
 		}
 		//添加产品类 到数据库
 		public function AddProductClassToDb(){
-			$this->ReturnAjax();
+			$productName = I('post.productName');
+			$productDes  = I('post.productDes');
+			
+			$menu = D('ProductMenu');
+			if($menu->AddProductData($productName,$productDes)){
+				
+				$this->ajaxSucceReturn("操作成功");
+			}else{
+				
+				$this->ajaxFailReturn($productName.":已存在");
+			}
 		}
 		
 	}
