@@ -33,7 +33,7 @@ CREATE TABLE `zytm_product_menu` (
 	`goods_maininfo` varchar(100) NOT NULL COMMENT '产品简介',
 	PRIMARY KEY(`goods_id`),
 	UNIQUE(goods_name)
-)ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='产品菜单信息表' AUTO_INCREMENT=1 ;
+)ENGINE=MyISAM   DEFAULT CHARSET=utf8 COMMENT='产品菜单信息表' AUTO_INCREMENT=1 ;
 
 
 
