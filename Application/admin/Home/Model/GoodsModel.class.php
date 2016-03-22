@@ -1,13 +1,11 @@
 <?php
 	namespace Home\Model;
 	use \Think\Model;
-	
+	//产品表
 	class GoodsModel extends Model{
 		
 		//默认goods_id的为大类产品 获取权限列表
-		public function getAuthId(){	
-			$this->where('goods_id')->select();
-		}
+
 		//获取产品总数
 		public function getProductCount(){
 			return $this->where()->count(); 

@@ -2,7 +2,7 @@
 	namespace Home\Controller;
 	
 	class UserController extends CommonController{
-		
+		//显示用户信息
 		public function Index(){
 			
 			$user =D('ManageUser');
@@ -13,14 +13,23 @@
 		}
 	
 		public function EditUserInfo(){
-			$goods = D('Goods');
-			
-			$this->assign('Authlist',$goods->getAuthId());
+			$ProductClass = D('ProductMenu');
+			//获取产品大类
+			$data = $ProductClass->getAuthId();
+			$this->assign('Authlist',$data);
 			
 			$this->display();
-			
 		}
-		//获取权限列表 ,及大类产品列表
+		
+		public function EditUserInfoToDb(){
+			$UserName = I('post.UserName');
+			$UserPasswd = I('post.UserPassWd');
+			$UserAuth = I('post.UserAuth');
+			$UserMoreInfo = I('post.UserMoreInfo');
+			//收到客户端的数据->
+			
+			$this->ajaxSucceReturn($UserName);
+		}
 		
 		
 	}

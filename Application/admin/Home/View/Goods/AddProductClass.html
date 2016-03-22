@@ -1,6 +1,7 @@
 <div id="main">
 	<div>
-	           产品类名:<input type="text" value="" style="width: 350px; height: 30px;" />
+	          产品类名:<input type="text" value="" style="width: 350px; height: 30px;" />
+	          <div id="addStation" style="display: inline; left: 200px;"></div>
 	</div>
 	<div>
 		产品简介:<textarea value="" style="overflow:auto;" rows="5" cols="50"></textarea>
@@ -35,11 +36,20 @@
 			beforeSend:function(){},
 			success:function(callbackData){	
 			 	//console.log(data);
-			 	console.log(callbackData);
+			 	//console.log(callbackData);
+		
+			 	if(callbackData.RequstStation){
+			 		
+			 		$('#addStation').html('<span  style="color: green;size:b5; right: 200px;">'+callbackData.RequstInfo+'</span>');
+			 	}else{
+			 		
+			 		$('#addStation').html('<span  style="color: red;size:b5; right: 200px;">'+callbackData.RequstInfo+'</span>');
+			 	}
           	 }
 			,
 		error:function(callbackData){
-			alert('执行失败');
+			//console.log(callbackData);
+			
 		}
 		
 		});

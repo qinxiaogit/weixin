@@ -9,7 +9,8 @@ CREATE TABLE `zytm_manage_user` (
 	`manage_create_date`  int(11) NOT NULL DEFAULT '0' COMMENT '创建时间',
 	`manage_id`	int(11)    NOT NULL  AUTO_INCREMENT COMMENT '用户ID',
     `manage_update_date`  int(11) NOT NULL DEFAULT '0' COMMENT '上次登录时间', 
-     PRIMARY KEY (`manage_id`)  
+     PRIMARY KEY (`manage_id`)  ,
+     UNIQUE(manage_name)
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='管理员信息表' AUTO_INCREMENT=0 ;
 
 
@@ -33,7 +34,7 @@ CREATE TABLE `zytm_product_menu` (
 	`goods_maininfo` varchar(100) NOT NULL COMMENT '产品简介',
 	PRIMARY KEY(`goods_id`),
 	UNIQUE(goods_name)
-)ENGINE=MyISAM   DEFAULT CHARSET=utf8 COMMENT='产品菜单信息表' AUTO_INCREMENT=1 ;
+)ENGINE=MyISAM   DEFAULT CHARSET=utf8 COMMENT='产品菜单信息表' AUTO_INCREMENT=0 ;
 
 
 

@@ -32,7 +32,14 @@ class ProductMenuModel	extends Model{
 		try{
 			$this->add(array('goods_name'=>$ProductName,'goods_maininfo'=>$ProductDes));
 		}catch(\Exception $e){
-			
+			/*出现已存在的name时执行下列代码
+			$MaxId = $this->max('goods_id');
+			ALTER TABLE zytm_product_menu AUTO_INCREMENT =123456
+			$sql = "ALTER TABLE ".$this->trueTableName." AUTO_INCREMENT  goods_id=" .$MaxId.";";
+			$sql = "ALTER TABLE zytm_product_menu AUTO_INCREMENT = 16";
+			$this->query($sql);
+			ALTER TABLE zytm_product_menu AUTO_INCREMENT
+			 */
 			return FALSE;
 		}
 		// return $this->data($data)->add(); 
@@ -42,6 +49,10 @@ class ProductMenuModel	extends Model{
 		 */
 		 return TRUE;
 	}
+	//查询所有产品大类
+		public function getAuthId(){	
+			return $this->select();
+		}
 	
 	
 }

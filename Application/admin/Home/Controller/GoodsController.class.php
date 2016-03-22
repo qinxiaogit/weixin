@@ -25,12 +25,18 @@
 		//添加新产品
 		public function AddProduct(){
 			
-			
+			$this->display();
 		}
+		
 		//添加产品类
 		public function AddProductClass(){
 			
 			$this->display(); // 输出模板
+		}
+		//添加产品到数据库
+		public function AddProductToDb(){
+			
+			
 		}
 		//添加产品类 到数据库
 		public function AddProductClassToDb(){
