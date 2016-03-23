@@ -5,7 +5,7 @@
 	<table class="table">
             <thead>
               <tr>
-                <th>用户名:</th>
+                <th>用户邮箱:</th>
                 <th><input id="UserName" type="text" /></th>
                 <th id="UserNameInputInfo"></th>
               </tr>
@@ -34,10 +34,12 @@
               </tr>
               <tr>
               	<th><button class="btn btn-lg btn-primary" onclick="alterAuth();">确认修改</button></th>
-              	<th><button class="btn btn-lg btn-primary">取消修改</button></th>
+              	
+              	
+              	<th id="AuthEditInfo"></th>
               </tr>
             </tbody>
-          </table>
+        </table>
 </diV>
 <script>
 function alterAuth(){
@@ -54,23 +56,26 @@ function alterAuth(){
 	}
 	//判断用户名是否为空
 	if(UserName==""){
-		$('#UserNameInputInfo').html('<span style="color:red;">用户名不能为空</span>');
+		$('#UserNameInputInfo').html('<span style="color:red;">用户邮箱不能为空</span>');
 		return false;
 	}//
 	//判断备注是否为空
 	if(UserMoreInfo==""){
 		UserMoreInfo = "无";
 	}
-
-	var data = {"UserPassWd":UserPassWd,"UserName":UserName,"UserMoreInfo":UserMoreInfo,"UserAuth":UserAuth};
 	
-	console.log(data);
+	var data = {"UserPassWd":UserPassWd,"UserName":UserName,"UserMoreInfo":UserMoreInfo,"UserAuth":UserAuth};	
 	$.ajax({
 		type:"post",
 		url:url,
 		data:data,
 		success:function(callbackdata){
 			console.log(callbackdata);
+			if(callbackdata.RequstStation){
+				$('#AuthEditInfo').html('<span style="color:green;">'+callbackdata.RequstInfo+'</span>');
+			}else{
+				$('#AuthEditInfo').html('<span style="color:red;">'+callbackdata.RequstInfo+'</span>');
+			}
 		},
 		error:function(callbackdata){
 			console.log(callbackdata);

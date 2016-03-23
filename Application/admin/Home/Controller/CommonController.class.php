@@ -21,9 +21,16 @@
 				if(!$this->CheckLoginState()){
 				  header("location: http://localhost/weixin/admin.php");
 				}  
+				$this->getHeadMenu();
 				$this->assignMenu(); 	 			
 			}
+	//产品类列表-pro_info
+	protected function getHeadMenu(){
 			
+		$ProductClass = D('ProductMenu');
+			//获取产品大类
+		$this->assign('pro_info',$ProductClass->getAuthId());	
+	}	
 	/* 分配菜单
      * @return
      */

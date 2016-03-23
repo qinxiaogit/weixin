@@ -50,9 +50,15 @@ class ProductMenuModel	extends Model{
 		 return TRUE;
 	}
 	//查询所有产品大类
-		public function getAuthId(){	
-			return $this->select();
-		}
-	
+	public function getAuthId(){	
+		return $this->select();
+	}
+		
+	//根据产品类的名字获取产品ID
+	public function getIDToGoodsName($name){
+		
+		$goodsInfo = $this->where('goods_name="'.$name.'"')->select();
+		return $goodsInfo[0]['goods_id'];
+	}	
 	
 }

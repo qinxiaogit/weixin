@@ -29,10 +29,30 @@ class ManageUserModel	extends Model{
 		return $this->select();	
 	}
 	//修改用户权限
-	public function EditUserInfo(){
+	public function EditUserAuth($UserEmail,$passwd,$AuthId){
+		$data['manage_role']=$AuthId;
+		$data['manage_passwd']=$passwd;
 		
-		
+		return $this->where('manage_email="'.$UserEmail.'"')->save($data); // 根据条件更新记录
 	}
+	//根据邮箱判断用户是否存在
+	public function UserIsExisit($UserEmail){
+			
+		$res = $this->where('manage_email="'.$UserEmail.'"')->select();
+		if($res){
+			return $res;
+		}
+		return FALSE;
+	}
+	//查询超级用户的name
+	public function SelectAdminName(){
+		
+		$admin = $this->where('manage_role="0"')->select();
+		return $admin[0]['manage_email'];		
+	}
+	
+	
+	
 	
 	
 }

@@ -52,6 +52,11 @@
 				$this->ajaxFailReturn($productName.":已存在");
 			}
 		}
+		//编辑产品
+		public function EditProduct(){
+			
+			
+		}
 		
 	}
 
