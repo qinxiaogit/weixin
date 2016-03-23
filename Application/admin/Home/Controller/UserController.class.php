@@ -71,11 +71,19 @@
 		$AddUserEmail= I('post.user_email');
 		$AddUserPassWd=I('post.user_passwd');
 		
+		
+		if(!isset($AddUserEmail)||$AddUserEmail==""){
+			$this->ajaxFailReturn("添加用户失败");
+			return FALSE;
+		}
+		
 		$data = array("manage_name"=>$AddUserName,"manage_role"=>-1,
 					  "manage_email"=>$AddUserEmail,"manage_passwd"=>md5(md5($AddUserPassWd)),
-					  "manage_create_date"=>UNIX_TIMESTAMP(),"manage_update_date"=> UNIX_TIMESTAMP()
-		);		
+					  "manage_create_date"=>time(),"manage_update-date"=>time()
+		);	
+		
 		$UserObj = D('ManageUser');
+		
 		if($UserObj->AddUser($data)){
 			$this->ajaxSucceReturn("添加用户成功");	
 		}else{

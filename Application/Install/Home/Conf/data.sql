@@ -11,7 +11,7 @@ CREATE TABLE `zytm_manage_user` (
     `manage_update_date`  int(11) NOT NULL DEFAULT '0' COMMENT '上次登录时间', 
      PRIMARY KEY (`manage_id`)  ,
      UNIQUE(manage_name)
-)ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='管理员信息表' AUTO_INCREMENT=0 ;
+)ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='管理员信息表' AUTO_INCREMENT=0 ;
 
 
 #产品表:公司产品表
@@ -24,7 +24,7 @@ CREATE TABLE `zytm_goods` (
 	`goods_info` text NOT NULL COMMENT '产品简介',
 	`goods_image_name` varchar(40) NOT NULL COMMENT '产品图片',
 	PRIMARY KEY(`goods_id`)
-)ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='产品信息表' AUTO_INCREMENT=0 ;
+)ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='产品信息表' AUTO_INCREMENT=0 ;
 
 #产品大类表
 DROP TABLE IF EXISTS `zytm_product_menu`;

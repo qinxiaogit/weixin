@@ -5,12 +5,18 @@ use \Think\Model;
 class ManageUserModel	extends Model{
 	//新增用户
 	public function AddUser(array $UserInfo){
-		try{
-			$this->add($UserInfo);
-		}catch(\Exception $e){
-			//改名字已经存在
+		//先判断该用户邮箱是否存在
+		
+			
+		if($this->UserIsExisit($UserInfo['manage_email'])){
+			//邮箱存在
+			print_r($this->UserIsExisit($UserInfo['manage_email']));	
 			return FALSE;
 		}
+		//邮箱不存在，将数据添加到数据库
+		
+		$this->add($UserInfo);
+	
 		return TRUE;
 	}
 	//删除用户

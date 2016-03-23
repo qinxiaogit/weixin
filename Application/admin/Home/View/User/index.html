@@ -79,15 +79,21 @@ $(function(){
 			return false;
 		}
 		//拼接数据
-		$data={"user_name":user_name,"user_email":user_email,"user_passwd":user_passwd};
+		var data={"user_name":user_name,"user_email":user_email,"user_passwd":user_passwd};
 		//将提交数据通过ajax提交给服务器
-		$url = "{:U('Home/User/AddManage/')}";
+		
+		var url = "{:U('Home/User/AddManage/')}";
 		$.ajax({
 			type:"post",
-			url:$url,
-			data:$data,
+			url:url,
+			data:data,
 			success:function(callbackdata){
-				console.log(callbackdata);
+				if(callbackdata.RequstStation){
+					$('#requstInfo').html('<span style="color: green;">'+callbackdata.RequstInfo+'</span>');
+					ManageInfo();
+				}else{
+					$('#requstInfo').html('<span style="color: red;">'+callbackdata.RequstInfo+'</span>');
+				}
 			},
 			error:function(callbackdata){
 				console.log('失败');
