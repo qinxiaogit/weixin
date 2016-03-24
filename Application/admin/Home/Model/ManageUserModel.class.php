@@ -5,12 +5,9 @@ use \Think\Model;
 class ManageUserModel	extends Model{
 	//新增用户
 	public function AddUser(array $UserInfo){
-		//先判断该用户邮箱是否存在
-		
-			
+		//先判断该用户邮箱是否存在	
 		if($this->UserIsExisit($UserInfo['manage_email'])){
-			//邮箱存在
-			print_r($this->UserIsExisit($UserInfo['manage_email']));	
+			//邮箱存在	
 			return FALSE;
 		}
 		//邮箱不存在，将数据添加到数据库
@@ -20,14 +17,8 @@ class ManageUserModel	extends Model{
 		return TRUE;
 	}
 	//删除用户
-	public function DelUser($name){
-		
-		
-	}
-	//编辑用户
-	public function EditUser(){
-		
-		
+	public function DelUser($UserEmail){	
+		return $this->where('manage_email="'.$UserEmail.'"')->delete();
 	}
 	//获取所有用户信息
 	public function GetAllUserInfo(){
@@ -38,9 +29,20 @@ class ManageUserModel	extends Model{
 	public function EditUserAuth($UserEmail,$passwd,$AuthId){
 		$data['manage_role']=$AuthId;
 		$data['manage_passwd']=$passwd;
+		$data['manage_update_date']=time();
 		
 		return $this->where('manage_email="'.$UserEmail.'"')->save($data); // 根据条件更新记录
 	}
+	//根据邮箱信息查询用户name
+	public function SelectUserNameToEmail($UserEmail){
+		$res = $this->where('manage_email="'.$UserEmail.'"')->select();
+		if($res){
+			return $res[0]['manage_name'];
+		}
+		return FALSE;
+		
+	}
+	
 	//根据邮箱判断用户是否存在
 	public function UserIsExisit($UserEmail){
 			

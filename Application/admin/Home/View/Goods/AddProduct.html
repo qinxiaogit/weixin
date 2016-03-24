@@ -1,7 +1,19 @@
-<div id="main">
-	
-	
-	
-	
-	
+
+
+	<div  id="content" style="width:400px;">
+				<script id="container" name="content" type="text/plain">
+       	 这里写你的初始化内容
+	</script>
 </div>
+
+<script type="text/javascript" src="../../../../../Ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="../../../../../Ueditor/ueditor.all.js"></script>
+<script type="text/javascript">
+       var ue = UE.getEditor('container', {
+	"initialFrameWidth" : "100%",   // 宽
+	"initialFrameHeight" :"120px",      // 高
+	"maximumWords" : 10000    
+});
+</script>
+	
+	

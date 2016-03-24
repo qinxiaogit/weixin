@@ -1,7 +1,7 @@
 <div  id='main'>
 	<table class="table">
 	<tr>
-		<td width="13%">全选/全不选<input type="checkbox" checked="" value="" id="SelectAllBox" onchange="SelectAllCheckBox();"/></td>
+		<td width="13%">全选/全不选<input type="checkbox"  value="" id="SelectAllBox" onchange="SelectAllCheckBox();"/></td>
 		<td>名字</td>
         <td>权限</td>
         <td>邮箱</td>
@@ -12,7 +12,8 @@
 	</tr>
 	<volist name="UserInfo" id="User">
 		<tr>
-			<td><input checked="" type="checkbox"/>
+			<td>
+				<input  type="checkbox"/>
 			</td>
             <td>{$User.manage_name}</td>
             <td>{$User.manage_role}</td>
@@ -24,7 +25,7 @@
     	</tr>
 	</volist>
  </table>
- <button class="btn btn-primary">删除管理员</button>
+ <button class="btn btn-primary" id="DelUser">删除管理员</button>
 <button class="btn btn-primary" onclick="AddManage();">新增管理员</button>
 </div>
 <div id="light" class="white_content">
@@ -89,8 +90,11 @@ $(function(){
 			data:data,
 			success:function(callbackdata){
 				if(callbackdata.RequstStation){
-					$('#requstInfo').html('<span style="color: green;">'+callbackdata.RequstInfo+'</span>');
-					ManageInfo();
+					//console.log(callbackdata);
+					$('#requstInfo').html('<span style="color: green;">添加成功</span>');
+					//ManageInfo();
+					setTimeout(ManageInfo,1000);
+					 window.location.reload();
 				}else{
 					$('#requstInfo').html('<span style="color: red;">'+callbackdata.RequstInfo+'</span>');
 				}
@@ -99,8 +103,39 @@ $(function(){
 				console.log('失败');
 			}
 		});
+	});
+	//绑定删除管理员事件
+	$('#DelUser').on('click',function(){
+		//获取div选中情况
+		var json=new Array();// 定义一个数组对象
+		var id = 0;
+		$('input').not(1).each(function(){
+			 if($(this).is(':checked')){
+			 	//获取当前列表的各项数据值
+			 	//邮箱-用户名
+			 	var test={"UserName":$(this).parent().next().text(),"UserEmail":$(this).parent().next().next().next().text()};// 增加一个新属性，此属性是数组
+				json.push(test);
+			 }
+		});
+		$url = "{:U('Home/User/DelUser')}";
 		
-	})
+		//发送数据到服务端
+		$.ajax({
+			type:"post",
+			url:$url,
+			data:{"DelUserInfo":json},
+			success:function(callbackdata){
+				  window.location.reload();
+			},
+			error:function(callbackdata){
+				console.log(callbackdata);
+			}
+		});
+		
+	});
+	
+	
+	
 })
 
 //添加管理员，弹出Div
@@ -108,13 +143,13 @@ function AddManage(){
 	document.getElementById('light').style.display='block';
 	document.getElementById('fade').style.display='block';
 }
-
+//隐藏div
 function ManageInfo(){
 	document.getElementById('light').style.display='none';
 	document.getElementById('fade').style.display='none'
 	
 }
-
+//全选按钮
 function SelectAllCheckBox(){
 	//权限按钮checkbox
 	//判断该复选框是否选中

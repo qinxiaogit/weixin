@@ -5,6 +5,5 @@ return array(
  	'/Home/Goods/AddProductClass'=>'发布产品类',
     'Index/EditProduct' => '编辑产品',
     '/Home/User/index' => '用户管理',
-    'Index/siteEdit' => '修改密码',
     'Home/Goods/CheckProductInfo' => '产品信息'
 );
