@@ -24,6 +24,10 @@
 		}
 		//添加新产品
 		public function AddProduct(){
+			$ProductClass = D('ProductMenu');
+			//获取产品大类
+			$data = $ProductClass->getAuthId();
+			$this->assign('Authlist',$data);
 			
 			$this->display();
 		}
@@ -35,9 +39,11 @@
 		}
 		//添加产品到数据库
 		public function AddProductToDb(){
-			
+			$Html = I('post.pageInfo');
+			$this->ajaxSucceReturn($Html);
 			
 		}
+		
 		//添加产品类 到数据库
 		public function AddProductClassToDb(){
 			$productName = I('post.productName');

@@ -104,9 +104,8 @@ body {
 	width: 80%;
 	height: 90%;
 	overflow-x:hidden;
-	left: 20%;
+	left: 15%;
 	right: 10%;
-	margin-top: 10px;
     overflow-y:scroll;
     min-height:auto;
     position:relative;
