@@ -40,8 +40,23 @@
 		//添加产品到数据库
 		public function AddProductToDb(){
 			$Html = I('post.pageInfo');
-			$this->ajaxSucceReturn($Html);
+			$goodsName = I('post.goodsName');
+			$goodspro =  I('post.goodsPro');
 			
+			$goods = D('Goods');
+			$goodsmenu = D('ProductMenu');
+			
+			if($Html==""||$goodsName==""||$goodspro ){
+				$this->ajaxFailReturn("失败");
+			}
+			
+			$goodsId = $goodsmenu->getIDToGoodsName($goodspro);
+			if($goods->SetDataToDb($goodsName,$Html,$goodsId)){
+				
+				$this->ajaxSucceReturn("成功");
+			}else{
+				$this->ajaxFailReturn("失败");
+			}
 		}
 		
 		//添加产品类 到数据库
@@ -60,6 +75,15 @@
 		}
 		//编辑产品
 		public function EditProduct(){
+			$ProductClass = D('ProductMenu');
+			//获取产品大类
+			$data = $ProductClass->getAuthId();
+			$this->assign('Authlist',$data);
+			
+			$this->display(); // 输出模板
+		}
+		//根据产品大类查询出所有子产品
+		public function SelectGoods(){
 			
 			
 		}

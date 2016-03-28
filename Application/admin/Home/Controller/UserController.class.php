@@ -9,7 +9,6 @@
 			$this->assign('UserInfo',$user->GetAllUserInfo());
 			$this->display();
 		}
-		
 		//删除用户
 		public function DelUser(){
 			//获取客户端传过来的删除用户信息

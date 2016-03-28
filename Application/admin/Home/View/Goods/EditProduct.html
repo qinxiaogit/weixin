@@ -1,20 +1,17 @@
 <div id="main">
-    <label  >产品名称:</label>
-        <input class="form-control" id="goods_name" type="text" />
-            <label >所属产品:</label>
-               <select class="form-control">
-               		<volist name="Authlist" id="auth">
-						<option style="width: 175px;">{$auth.goods_name}</option>
-					</volist>
-               </select>
-</div>
-<br>
-<div style="text-align: center;size: 100px;font: '微软雅黑';">
-
-	
-		<br />产品描述信息
-		<br />
-	
+	<br />
+	产品大类:
+	<select class="form-control" id="Goods">
+    	<volist name="Authlist" id="auth">
+	    	<option style="width: 175px;">{$auth.goods_name}</option>
+		</volist>
+	</select>
+	<br />
+	产品名称:
+	<select class="form-control" id="childGoods">
+    	
+	</select>
+	<br />
 </div>
 <div  id="content"  style="position: relative; width:80%;height=70%; left: 15%;
 	right: 10%;">
@@ -22,6 +19,7 @@
        	编写产品信息
 	</script>
 </div>
+<br />
 
 <div  style="position: relative;left: 15%; margin-top: 30px;" >
 	<button class="btn btn-primary" id="CommitInfoDb" style="width: 80%;">确      认</button>
@@ -36,11 +34,22 @@
 		"initialFrameHeight" :"200px",  // 高
 		"maximumWords" : 100000    
 	});
+	//选择框
+	var Goods  	   = $('#goods');
+	var childGoods = $('#childGoods'); 
+	
+	//加载
+	$(document).ready(function(){
+		
+		
+	});
 
 	$('#CommitInfoDb').on('click',function(){
 		var html = ue.getContent();
 		var goodsId = $('select').val();
 		var goodsName = $('#goods_name').val();
+		
+		
 		
 		$.ajax({
 			type:"post",
@@ -56,9 +65,19 @@
     	
     	
 	});
+	//获取子产品信息
+	function GetChildGoodsList(){
+		$.ajax({
+			type:"post",
+			url:"{:U('Home/Goods/AddProductToDb')}",
+			data:{"pageInfo":html,"goodsName":goodsName,"goodsId":goodsId},
+			success:function(CallbackData){
+				console.log(CallbackData);
+			},
+			error:function(CallbackData){
+				console.log(CallbackData);
+		});
+		
+	}
 
 </script>
-
-
-	
-	

@@ -17,7 +17,17 @@
 			return  $this->page($PageCount,$ProductCount)->select();
 			
 		}
-		//获取某类产品的信息
+		/*将产品信息添加到数据库 
+		 *param: $goodsName ->产品名字
+		 * 		 $goodsInfo ->产品信息
+		 * 		 $goodsPro	->所属产品ID	
+		 * */
+		public function SetDataToDb($goodsName,$goodsInfo,$goodsPro){
+			
+			$data = array("goods_pre_id"=>$goodsPro,"goods_name"=>$goodsName,"goods_info"=>$goodsInfo,"goods_image_name"=>"");
+			
+			return $this->add($data);
+		}
 		
 		
 	}
