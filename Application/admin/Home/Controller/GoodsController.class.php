@@ -10,13 +10,17 @@
 			$goods = D('Goods'); // 实例化Data数据对象
 			
 			$goodCount = $goods->getProductCount();
-			   		
+			
+			$page = I('get.page');
+			
+			$page = !empty($page) ? $page: 1;
+
    			$pageCount = array();
-			for($i=1;$i<=($goodCount/10)+1 ;$i++){
-				$pageCount[$i-1] = $i ;
+			for($i=0;$i<=(($goodCount-$page)/10)+0 ;$i++){
+				$pageCount[$i] = $page+$i ;
 			}
 			$this->assign('page',$pageCount);
-			
+			//$this->assign('page',$page);			
 			//print_r($goods->getPageInfo(1,10));
 			$this->assign('goodsInfo',$goods->getPageInfo(1,10));
    			
@@ -39,19 +43,22 @@
 		}
 		//添加产品到数据库
 		public function AddProductToDb(){
+			
 			$Html = I('post.pageInfo');
 			$goodsName = I('post.goodsName');
-			$goodspro =  I('post.goodsPro');
+			$goodspro =  I('post.goodsId');
+			$goodsInfo = I('post.goodsInfo');
 			
 			$goods = D('Goods');
 			$goodsmenu = D('ProductMenu');
 			
-			if($Html==""||$goodsName==""||$goodspro ){
+			if($Html==""||$goodsName==""||$goodsInfo==""||$goodspro=="" ){
 				$this->ajaxFailReturn("失败");
 			}
 			
 			$goodsId = $goodsmenu->getIDToGoodsName($goodspro);
-			if($goods->SetDataToDb($goodsName,$Html,$goodsId)){
+	
+			if($goods->SetDataToDb($goodsName,$Html,$goodsId,$goodsInfo)){
 				
 				$this->ajaxSucceReturn("成功");
 			}else{

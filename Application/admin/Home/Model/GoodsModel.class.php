@@ -21,13 +21,18 @@
 		 *param: $goodsName ->产品名字
 		 * 		 $goodsInfo ->产品信息
 		 * 		 $goodsPro	->所属产品ID	
+		 * 		 $goodsInfo ->产品简介
 		 * */
-		public function SetDataToDb($goodsName,$goodsInfo,$goodsPro){
+		public function SetDataToDb($goodsName,$goodsInfo,$goodsPro,$goods_info){
 			
-			$data = array("goods_pre_id"=>$goodsPro,"goods_name"=>$goodsName,"goods_info"=>$goodsInfo,"goods_image_name"=>"");
+			$data = array("goods_pre_id"=>$goodsPro,"goods_name"=>$goodsName,"goods_info"=>$goodsInfo,"goods_image_name"=>$goods_info);
 			
-			return $this->add($data);
+			return $data;//$this->add($data);
 		}
+		/*
+		 * 检测该产品是否存在
+		 */
+		
 		
 		
 	}

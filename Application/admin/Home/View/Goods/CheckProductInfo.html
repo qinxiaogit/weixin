@@ -19,7 +19,7 @@
 	<ul class="pagination"> 	
 		<li><a href="#">&laquo;</a></li>
 	 	<volist name='page' id='page' >
-			<li><a>{$page}</a></li>				
+			<li><a href="{:U('Home/Goods/CheckProductInfo')}?page={$page}">{$page}</a></li>				
 		</volist>
 		  <li><a href="#">&raquo;</a></li>
 	</ul>

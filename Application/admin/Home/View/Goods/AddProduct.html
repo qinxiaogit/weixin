@@ -7,14 +7,12 @@
 						<option style="width: 175px;">{$auth.goods_name}</option>
 					</volist>
                </select>
+   <label>产品简介</label>
+   		<input class="form-control" id="goods_info"  type="text"/>
 </div>
 <br>
 <div style="text-align: center;size: 100px;font: '微软雅黑';">
-
-	
-		<br />产品描述信息
-		<br />
-	
+		产品描述信息
 </div>
 <div  id="content"  style="position: relative; width:80%;height=70%; left: 15%;
 	right: 10%;">
@@ -41,19 +39,29 @@
 		var html = ue.getContent();
 		var goodsId = $('select').val();
 		var goodsName = $('#goods_name').val();
-		
+		var goodsInfo = $('#goods_info').val();
+		$data = {"pageInfo":html,"goodsName":goodsName,"goodsId":goodsId,"goodsInfo":goodsInfo};
+	
 		$.ajax({
 			type:"post",
 			url:"{:U('Home/Goods/AddProductToDb')}",
-			data:{"pageInfo":html,"goodsName":goodsName,"goodsId":goodsId},
-			success:function(CallbackData){
-				console.log(CallbackData);
-			},
-			error:function(CallbackData){
-				console.log(CallbackData);
-			}
+			dataType:"json",
+			data:$data ,
+			beforeSend:function(){},
+			success:function(callbackData){
+			 	console.log(callbackData);
+			 	if(callbackData.RequstStation){
+			 	
+			 	}else{
+			 	}
+          	 }
+			,
+		error:function(callbackData){
+			//console.log(callbackData);
+			
+		}
+		
 		});
-    	
     	
 	});
 

@@ -8,7 +8,6 @@ class IndexController extends Controller
     	layout(false);
     	$this->display();    
 	}
-
 	//验证码操作
 	public function Verify(){  
     	$Verify = new \Think\Verify();  
@@ -32,7 +31,6 @@ class IndexController extends Controller
 			$this->success('登录成功',U('Home/Home/'),1);
 			cookie('UserName',$UserName);
 			cookie('UserPasswd',$UserPasswd);
-			
 		}else{	
 				$this->error('密码错误',U('Home/Index/'),1);
 			}
