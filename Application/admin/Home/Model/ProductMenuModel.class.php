@@ -53,7 +53,6 @@ class ProductMenuModel	extends Model{
 	public function getAuthId(){	
 		return $this->select();
 	}
-		
 	//根据产品类的名字获取产品ID
 	public function getIDToGoodsName($name){
 		

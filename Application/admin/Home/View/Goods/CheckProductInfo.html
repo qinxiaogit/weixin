@@ -8,20 +8,26 @@
               </tr>
 		<volist name="goodsInfo" id="goods" >
               <tr>
-                <td>{$goods.goods_name}</td>
-                <td><a>{$goods.goods_info}</a></td>
-                <td><a>编辑</a></td>
+                <td><a href="{:U('Home/Goods/DisplayProduct')}?goodsName={$goods.goods_name}">{$goods.goods_name}</a></td>
+                <td>{$goods.goods_image_name}</td>
+                <td><a href="{:U('Home/Goods/EditProduct')}?goodsName={$goods.goods_name}">编辑</a></td>
               </tr>
         </volist>
      </table>
 
 <div class="pageli">
 	<ul class="pagination"> 	
-		<li><a href="#">&laquo;</a></li>
+		<li ><a href="{:U('Home/Goods/CheckProductInfo')}?page={$pageSta-1}">&laquo;</a></li>
 	 	<volist name='page' id='page' >
-			<li><a href="{:U('Home/Goods/CheckProductInfo')}?page={$page}">{$page}</a></li>				
+			<li ><a href="{:U('Home/Goods/CheckProductInfo')}?page={$page}">{$page}</a></li>				
 		</volist>
-		  <li><a href="#">&raquo;</a></li>
+		 <if condition="$pageSta+1 gt $pageEnd ">
+			<li><a href="{:U('Home/Goods/CheckProductInfo')}?page={$pageEnd}">&raquo;</a></li>
+				<else /> 
+		<li><a href="{:U('Home/Goods/CheckProductInfo')}?page={$pageSta+1}">&raquo;</a></li>
+		</if>
+
+		  
 	</ul>
 </div>
 </div>

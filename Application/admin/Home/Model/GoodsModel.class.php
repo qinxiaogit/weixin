@@ -24,15 +24,36 @@
 		 * 		 $goodsInfo ->产品简介
 		 * */
 		public function SetDataToDb($goodsName,$goodsInfo,$goodsPro,$goods_info){
-			
+			//addslashes($str)
+			if($this->CheckGoodsIsExit($goodsName)){
+				return FALSE;
+			}
 			$data = array("goods_pre_id"=>$goodsPro,"goods_name"=>$goodsName,"goods_info"=>$goodsInfo,"goods_image_name"=>$goods_info);
-			
-			return $data;//$this->add($data);
+		
+			return $this->add($data);
 		}
 		/*
 		 * 检测该产品是否存在
 		 */
+		public function CheckGoodsIsExit($goodsName){
 		
+			$data = $this->where('goods_name="'.$goodsName.'"')->find();	
+			if(is_array($data)){
+				return TRUE;
+			}
+			return FALSE;
+		}
+		/*
+		 * 查找某个产品展示页面
+		 * 
+		 */
+		 public function FindGoodsPage($goodsName){
+		 	$data = $this->where('goods_name="'.$goodsName.'"')->find();	
+			if(is_array($data)){
+				return $data['goods_info'];
+			}
+			return FALSE;
+		 }
 		
 		
 	}

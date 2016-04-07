@@ -36,12 +36,12 @@
 	});
 
 	$('#CommitInfoDb').on('click',function(){
-		var html = ue.getContent();
+		var html = ue.getAllHtml();
 		var goodsId = $('select').val();
 		var goodsName = $('#goods_name').val();
 		var goodsInfo = $('#goods_info').val();
-		$data = {"pageInfo":html,"goodsName":goodsName,"goodsId":goodsId,"goodsInfo":goodsInfo};
-	
+		console.log(html);
+		$data = {"pageInfo":encodeURI(html),"goodsName":goodsName,"goodsId":goodsId,"goodsInfo":goodsInfo};
 		$.ajax({
 			type:"post",
 			url:"{:U('Home/Goods/AddProductToDb')}",
@@ -49,16 +49,11 @@
 			data:$data ,
 			beforeSend:function(){},
 			success:function(callbackData){
-			 	console.log(callbackData);
-			 	if(callbackData.RequstStation){
-			 	
-			 	}else{
-			 	}
+				alert('添加产品:'+callbackData.RequstInfo);
           	 }
 			,
 		error:function(callbackData){
-			//console.log(callbackData);
-			
+			//console.log(callbackData);	
 		}
 		
 		});

@@ -49,8 +49,6 @@
 		var goodsId = $('select').val();
 		var goodsName = $('#goods_name').val();
 		
-		
-		
 		$.ajax({
 			type:"post",
 			url:"{:U('Home/Goods/AddProductToDb')}",
@@ -76,6 +74,7 @@
 			},
 			error:function(CallbackData){
 				console.log(CallbackData);
+			}
 		});
 		
 	}
