@@ -4,6 +4,23 @@
 	
 	class GoodsController extends CommonController{
 		
+		public function goods()
+		{
+			$id=23;
+			$gdModel = D('Goods');
+			$gdModel->where(array('goods_id'=>array('eq',$id)))->find();
+			$goods='nihaoedffwerrwerrrwerwr';
+			$this->assign('goods',$goods);
+			$this->display();
+			
+			
+			
+		}
+		
+		
+		
+		
+		
 		//展示某个产品
 		public function DisplayProduct(){
 			
@@ -18,8 +35,10 @@
 			$goods = $goods->FindGoodsPage($title);
 			
 			$this->assign('goods',$goods);
-			$this->show(urldecode($goods));
-			//$this->display('DisplayProduct');
+			//var_dump($goods);die;
+			//$this->show(urldecode($goods));
+			
+			$this->display('goods');
 		}
 		//查看产品
 		public function  CheckProductInfo(){
@@ -61,7 +80,8 @@
 		//添加产品到数据库
 		public function AddProductToDb(){
 			
-			$Html = I('post.pageInfo');
+			//$Html = I('post.pageInfo');
+			$Html = $_POST['pageInfo'];
 			$goodsName = I('post.goodsName');
 			$goodspro =  I('post.goodsId');
 			$goodsInfo = I('post.goodsInfo');

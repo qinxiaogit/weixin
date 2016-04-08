@@ -34,14 +34,15 @@
 		"initialFrameHeight" :"200px",  // 高
 		"maximumWords" : 100000    
 	});
-
+	//encodeURI(
 	$('#CommitInfoDb').on('click',function(){
-		var html = ue.getAllHtml();
+		var html = ue.getContent();
+		console.log(html);
 		var goodsId = $('select').val();
 		var goodsName = $('#goods_name').val();
 		var goodsInfo = $('#goods_info').val();
 		console.log(html);
-		$data = {"pageInfo":encodeURI(html),"goodsName":goodsName,"goodsId":goodsId,"goodsInfo":goodsInfo};
+		$data = {"pageInfo":html,"goodsName":goodsName,"goodsId":goodsId,"goodsInfo":goodsInfo};
 		$.ajax({
 			type:"post",
 			url:"{:U('Home/Goods/AddProductToDb')}",

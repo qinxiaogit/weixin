@@ -13,6 +13,7 @@ class IndexController extends Controller{
      * 所以，微信公众平台后台填写的api地址则为该操作的访问地址
      */
     public function index($id = ''){
+        	
         //调试
         try{
             $appid = 'wx58aebef2023e68cd'; //AppID(应用ID)
@@ -24,7 +25,7 @@ class IndexController extends Controller{
             
             /* 获取请求信息 */
             $data = $wechat->request();
-
+			
             if($data && is_array($data)){
                 /**
                  * 你可以在这里分析数据，决定要返回给用户什么样的信息

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>{$title}</title>
+		<link href="__PUBLIC__/stylesheets/home/bootstrap.min.css" rel="stylesheet"/>
+		<script src="__PUBLIC__/javascripts/home/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="__PUBLIC__/javascripts/home/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+			body{
+				background: lightgray;
+			}
+			#round {
+   				padding:10px; width:90px; height:50px;
+   				border: 5px solid #dedede;
+   				-moz-border-radius: 15px;      /* Gecko browsers */
+   				-webkit-border-radius: 15px;   /* Webkit browsers */
+   				border-radius:15px;            /* W3C syntax */
+				float: right;
+				}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<nav class="navbar navbar-inverse" role="navigation">
+   				<div class="navbar-header">
+      				<a class="navbar-brand" href="#">中亚通茂科技股份有限公司</a>
+   					</div>
+  	 				<div>
+     					<ul class="nav navbar-nav">
+         					<volist name="goods" id="GoodsClass">
+         						<li><a href="{:U('/GoodsDisplay/Index')}?GoodsClassName={$GoodsClass.goods_name}">{$GoodsClass.goods_name}</a></li>
+         					</volist>
+      					</ul>
+   					</div>
+   					<div style="float: right;">  
+   					<form class="navbar-form navbar-left" role="search">
+         			   <div class="form-group">
+            		    <input type="text" class="form-control" placeholder="Search">
+         			   </div>
+        			  <button type="submit" class="btn btn-default">提交</button>
+     				</form>  
+   					</div>
+			</nav>
+			<volist name="goodstable" id="GoodsClass">
+			<div class="row">
+  			 <div class="col-sm-12" >
+    			<b>{$GoodsClass.goods_name}:</b>
+		    	<button id="round" class="btn-info">详细信息</button>
+    			<div class="row" style="margin: 5px;">
+      				<div class="col-xs-8 col-sm-6">
+        			  {$GoodsClass.goods_image_name}
+      				</div>
+    			</div>
+  			 </div>
+			</div>
+			<hr />
+			</volist>
+		 </div>
+		</div>
+		<script>
+			
+			document.getElementsByName('button').click(function(){
+				console.log(this);
+			});
+			$('#round').on('click',function(){
+				
+			});
+			
+			
+		</script>
+	</body>
+</html>
