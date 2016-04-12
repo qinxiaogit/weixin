@@ -5,7 +5,6 @@
 	class GoodsModel extends Model{
 		
 		//默认goods_id的为大类产品 获取权限列表
-
 		//获取产品总数
 		public function getProductCount(){
 			return $this->where()->count(); 
@@ -19,17 +18,16 @@
 		}
 		/*将产品信息添加到数据库 
 		 *param: $goodsName ->产品名字
-		 * 		 $goodsInfo ->产品信息
-		 * 		 $goodsPro	->所属产品ID	
 		 * 		 $goodsInfo ->产品简介
+		 * 		 $goodsPro	->所属产品ID	
+		 * 		 $goods_Info ->产品描述信息
 		 * */
-		public function SetDataToDb($goodsName,$goodsInfo,$goodsPro,$goods_info){
-			//addslashes($str)
+		public function SetDataToDb($goodsName,$goodsInfo,$goodsPreId,$goods_info,$goods_preview_image_path){
+			
 			if($this->CheckGoodsIsExit($goodsName)){
 				return FALSE;
 			}
-			$data = array("goods_pre_id"=>$goodsPro,"goods_name"=>$goodsName,"goods_info"=>$goodsInfo,"goods_image_name"=>$goods_info);
-		
+			$data = array("goods_prev_id"=>$goodsPreId,"goods_name"=>$goodsName,"goods_info"=>$goodsInfo,"goods_image_name"=>$goods_info,"goods_preview_image_path"=>$goods_preview_image_path);
 			return $this->add($data);
 		}
 		/*
@@ -50,10 +48,31 @@
 		 public function FindGoodsPage($goodsName){
 		 	$data = $this->where('goods_name="'.$goodsName.'"')->find();	
 			if(is_array($data)){
-				return $data['goods_info'];
+				return $data;
 			}
 			return FALSE;
 		 }
+		 /*
+		  * 根据产品名字获取产品信息
+		  * 以数组的形式进行返回
+		  */
+		  function getGoodsInfoToName($goodsName){
+		  	$data = $this->where('goods_name="'.$goodsName.'"')->find();	
+			if(is_array($data)){
+				return $data;
+			}
+			return FALSE;
+		  }
+		  /*
+		   * 更新数据数据信息
+		   */
+		   function UpdataGoodsInfo(Array $data,$condtion){	
+				return $this->where($condtion)->save($data); // 根据条件更新记录
+		   }
+		   function getPrevieImageInfo($condtion){
+		   	 return $this->fetchSql(FALSE)->where($condtion)->getField('goods_preview_image_path');
+		   }
+		   
 		
 		
 	}

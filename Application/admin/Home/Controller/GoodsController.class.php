@@ -3,24 +3,7 @@
 	use 	Think\Controller;
 	
 	class GoodsController extends CommonController{
-		
-		public function goods()
-		{
-			$id=23;
-			$gdModel = D('Goods');
-			$gdModel->where(array('goods_id'=>array('eq',$id)))->find();
-			$goods='nihaoedffwerrwerrrwerwr';
-			$this->assign('goods',$goods);
-			$this->display();
-			
-			
-			
-		}
-		
-		
-		
-		
-		
+	
 		//展示某个产品
 		public function DisplayProduct(){
 			
@@ -32,13 +15,12 @@
 			//实例化产品表
 			$goods = D('Goods');
 			//获取产品展示信息
-			$goods = $goods->FindGoodsPage($title);
-			
-			$this->assign('goods',$goods);
-			//var_dump($goods);die;
+			$goodsinfo = $goods->FindGoodsPage($title);
+			$this->assign('goodstitle',$goodsinfo['goods_name']);
+			$this->assign('goodsimagename',stripslashes($goodsinfo['goods_image_name']));
+			//stripslashes var_dump($goods);die;
 			//$this->show(urldecode($goods));
-			
-			$this->display('goods');
+			$this->display();
 		}
 		//查看产品
 		public function  CheckProductInfo(){
@@ -77,33 +59,70 @@
 			
 			$this->display(); // 输出模板
 		}
+		/*文件上传支持
+		 * 文件上传成功，返回文件的名称
+		 */
+		private function UploadFile(){
+			$upload = new \Think\Upload();// 实例化上传类
+			$upload->maxSize = 3145728 ;// 设置附件上传大小
+			$upload->exts = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+			$upload->autoSub = true;
+			$upload->subName = array('date','Y-m-d');
+			$upload->saveName = time().'_'.mt_rand();
+			$upload->rootPath = WEB_ROOT.'Public/Uploads/'; // 设置附件上传根目录
+			
+			return  $upload->uploadOne($_FILES['goods_image']);
+		}
+		
 		//添加产品到数据库
 		public function AddProductToDb(){
 			
-			//$Html = I('post.pageInfo');
-			$Html = $_POST['pageInfo'];
-			$goodsName = I('post.goodsName');
-			$goodspro =  I('post.goodsId');
-			$goodsInfo = I('post.goodsInfo');
+			$goodsSimple = I('post.goods_simple');
+			$goodsName = I('post.goods_name');
+			$goodspro =  I('post.goods_id');
+			$method = I('get.method');
+		
+			//过滤引号
+			$goods_priview_html =addslashes($_POST['goods_priview_html']);
 			
 			$goods = D('Goods');
-			$goodsmenu = D('ProductMenu');
-			
-			if($Html==""||$goodsName==""||$goodsInfo==""||$goodspro=="" ){
-				$this->ajaxFailReturn("失败");
+			$goodsmenu = D('ProductMenu');	
+			if($goodsName==""||$goodsSimple==""||$goodspro=="" ){
+				$this->error("操作失败");
 			}
-			
 			$goodsId = $goodsmenu->getIDToGoodsName($goodspro);
-			if($goods->SetDataToDb($goodsName,$Html,$goodsId,$goodsInfo)){
-				$this->ajaxSucceReturn("成功");
-			}else{
-				$this->ajaxFailReturn("失败");
+			$data = array("goods_prev_id"=>$goodsId,"goods_name"=>$goodsName,"goods_info"=>$goodsSimple,"goods_image_name"=>$goods_priview_html);
+			
+			//判断是否为修改操作
+			if($method=="add"){
+				$fileinfo = $this->UploadFile();
+				if(!$fileinfo){
+					$this->error("上传文件失败");
+				}
+				$fileinfo = $fileinfo['savepath'].$fileinfo['savename'];
+				if($goods->SetDataToDb($goodsName,$goodsSimple,$goodsId,$goods_priview_html,$fileinfo)){
+					$this->success("添加产品成功");
+				}else{
+					$this->error("添加产品失败");
+				}
+			}else if($method=="edit"){
+				
+				$fileinfo = $this->UploadFile();
+				if($fileinfo){
+					$data['goods_preview_image_path'] = $fileinfo['savepath'].$fileinfo['savename'];
+					//上传图片成功-》删除原来预览图
+					$imagePath = WEB_ROOT.'Public/Uploads/'.$goods->getPrevieImageInfo('goods_name="'.$goodsName.'"');
+					//删除原来预览图
+					unlink($imagePath);
+				}
+				$goods->UpdataGoodsInfo($data,'goods_name="'.$goodsName.'"');
+				$this->success("更新产品信息成功");
 			}
 			
 		}
-		
 		//添加产品类 到数据库
 		public function AddProductClassToDb(){
+				
 			$productName = I('post.productName');
 			$productDes  = I('post.productDes');
 			
@@ -118,15 +137,39 @@
 		}
 		//编辑产品
 		public function EditProduct(){
-			$ProductClass = D('ProductMenu');
 			//获取产品的名称
 			$goodsName = I("get.goodsName");
-			if(isset($goodsName)){
-				//获取产品大类
-				$data = $ProductClass->getAuthId();
-				$this->assign('Authlist',$data);
+			if(!empty($goodsName)){
+			//产品类数据库实例
+			$ProductClass = D('ProductMenu');
+			//产品数据库实例
+			$goodsDb = D('Goods');
+			//获取待编辑产品的信息
+			$goodsinfo =$goodsDb->getGoodsInfoToName($goodsName);
+			if(!$goodsinfo){
+				layout(FALSE);
+				 header( " HTTP/1.0  404  Not Found" );
+                 $this->display( 'Public:goods404' );
+				 die;
+			}
 			
-				$this->display(); // 输出模板	
+			//设置产品名称
+			$this->assign('goodsname',$goodsName);
+			//获取产品大类
+			$data = $ProductClass->getAuthId();
+			$this->assign('Authlist',$data);
+				
+			//设置产品简介
+			$this->assign('goodssimple',$goodsinfo['goods_info']);
+			//设置预览效果
+			$this->assign('goods_preview',stripslashes($goodsinfo['goods_image_name']));
+			
+			$this->display(); // 输出模板	
+			
+			}else{
+				  layout(FALSE);
+				  header( " HTTP/1.0  404  Not Found" );
+                  $this->display( 'Public:404' );
 			}
 		}
 		//根据产品大类查询出所有子产品

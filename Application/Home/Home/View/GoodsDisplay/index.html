@@ -9,6 +9,7 @@
 		<script src="__PUBLIC__/javascripts/home/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 		
 		<style type="text/css">
+			
 			body{
 				background: lightgray;
 			}
@@ -20,46 +21,66 @@
    				border-radius:15px;            /* W3C syntax */
 				float: right;
 				}
+			    /* Large desktop */
+    @media (min-width: 1200px) { ... }
+     
+    /* Portrait tablet to landscape and desktop */
+    @media (min-width: 768px) and (max-width: 979px) { ... }
+     
+    /* Landscape phone to portrait tablet */
+    @media (max-width: 767px) { ... }
+     
+    /* Landscape phones and down */
+    @media (max-width: 480px) { ... }
 		</style>
+		
 	</head>
 	<body>
 		<div class="container">
-			<nav class="navbar navbar-inverse" role="navigation">
-   				<div class="navbar-header">
+			 <nav class="navbar navbar-inverse " role="navigation">
+   				<div class="row">
+   				<div class="navbar-header col-sm-4">
       				<a class="navbar-brand" href="#">中亚通茂科技股份有限公司</a>
-   					</div>
-  	 				<div>
+   				</div>
+   				<div class="col-sm-1"></div>
+  	 				<div col-sm-7>
      					<ul class="nav navbar-nav">
          					<volist name="goods" id="GoodsClass">
          						<li><a href="{:U('/GoodsDisplay/Index')}?GoodsClassName={$GoodsClass.goods_name}">{$GoodsClass.goods_name}</a></li>
          					</volist>
       					</ul>
+      					
    					</div>
    					<div style="float: right;">  
    					<form class="navbar-form navbar-left" role="search">
          			   <div class="form-group">
             		    <input type="text" class="form-control" placeholder="Search">
          			   </div>
-        			  <button type="submit" class="btn btn-default">提交</button>
      				</form>  
    					</div>
+   					</div>
 			</nav>
+			
 			<volist name="goodstable" id="GoodsClass">
 			<div class="row">
-  			 <div class="col-sm-12" >
-    			<b>{$GoodsClass.goods_name}:</b>
-		    	<button id="round" class="btn-info">详细信息</button>
-    			<div class="row" style="margin: 5px;">
-      				<div class="col-xs-8 col-sm-6">
-        			  {$GoodsClass.goods_image_name}
-      				</div>
-    			</div>
+				<div class="col-sm-12 center-align"><p >{$GoodsClass.goods_name}:</p></div>
+			</div>
+			<div class="row">
+  			 <div class="col-sm-12" >  			
+					<img  style="width: 100%; height: 280px;" alt="" src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1460451630&di=87456a5e1679d54e9cb8ca9815047680&src=http://www.qqpk.cn/Article/UploadFiles/201411/20141116135722547.jpg" class="img-responsive img-thumbnail img-rounded center-block">
   			 </div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 center-align" >	
+        			  {$GoodsClass.goods_info}
+    			</div>
+    			<div class="col-sm-12" >
+    				<button id="round" class="btn-info" >详细信息</button>
+    			</div>
 			</div>
 			<hr />
 			</volist>
 		 </div>
-		</div>
 		<script>
 			
 			document.getElementsByName('button').click(function(){
