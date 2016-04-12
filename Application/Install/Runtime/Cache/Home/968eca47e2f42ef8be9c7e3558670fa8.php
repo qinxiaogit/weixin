@@ -1,0 +1,130 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>成都中亚通茂科技有限公司</title>
+    <link rel="stylesheet" href="/weixin/Public/stylesheets/install/install.css" />
+    <script type="text/javascript" src="/weixin/Public/javascripts/install/jquery-2.1.1.js" ></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+    <h1 class="logo"><?php echo C('SYSTEM_NAME');?></h1>
+    <div class="icon_install">安装向导</div>
+    <div class="version">Version <?php echo C('SYSTEM_VERSION');?> by <?php echo C('AUTHOR_NAME');?></div>
+</div>
+
+        <div class="section">
+            <div class="step">
+    <ul>
+      <li class="on"><em>1</em>检测环境</li>
+      <li class="current"><em>2</em>创建数据</li>
+      <li><em>3</em>完成安装</li>
+    </ul>
+</div>
+<form id="J_install_form" action="<?php echo U('Installed/Index');?>" method="post">
+	<input type="hidden" name="force" value="0" />
+	<div class="server">
+		<table width="100%">
+			<tr>
+                <td class="td1" width="100">数据库信息</td>
+                <td class="td1" width="200">&nbsp;</td>
+                <td class="td1">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="tar">数据库服务器：</td>
+                <td><input type="text" name="db[host]" id="dbhost" value="127.0.0.1" class="input"></td>
+                <td><div id="J_install_tip_db_host"><span class="gray">数据库服务器地址，一般为localhost</span></div></td>
+			</tr>
+			<tr>
+				<td class="tar">数据库端口号：</td>
+				<td ><input type="text" name="db[port]" id="dbport" value="3306" class="input"/></td>				
+				<td><div id="J_install_tip_db_host"><span class="gray">数据库服务器端口号，一般为3306</span></div></td>
+			</tr>
+			
+			<tr>
+				<td class="tar">用户名：</td>
+				<td ><input type="text" name="db[username]" id="username" value="root" class="input"/></td>				
+				<td><div id="J_install_tip_db_host"><span class="gray">数据库用户名，一般为root</span></div></td>
+			</tr>
+			<tr>
+				<td class="tar">数据库密码：</td>
+				<td ><input type="password" name="db[password]" id="dbpw" value="" class="input" autoComplete="off" onblur="CheckDbPwd()"/></td>				
+				<td><div id='J_install_tip_db_password'></div></td>
+			</tr>
+			<tr>
+                <td class="tar">数据库名：</td>
+                <td><input type="text" name="db[dbname]" id="dbname" value="test" class="input"></td>
+                <td><div id="J_install_tip_db_name"></div></td>
+            </tr>
+            <tr>
+                <td class="tar">数据库表前缀：</td>
+                <td><input type="text" name="db[prefix]" id="dbprefix" value="zytm_" class="input"></td>
+                <td><div id="J_install_tip_db_prefix"><span class="gray">建议使用默认，同一数据库安装多个通用后台时需修改</span></div></td>
+            </tr>
+		</table>
+		 <table width="100%">
+            <tr>
+                <td class="td1" width="100">超级管理员信息</td>
+                <td class="td1" width="200">&nbsp;</td>
+                <td class="td1">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="tar">登录邮箱：</td>
+                <td><input type="text" name="admin[email]" class="input" value="0@qq.com" onblur="emailCheck()" id="emailText"/></td>
+                <td><div id="J_install_tip_admin_email"><span class="gray">邮箱地址</span></div></td>
+            </tr>
+            <tr>
+                <td class="tar">登录密码：</td>
+                <td><input type="text" name="admin[password]" id="J_manager_pwd" class="input" autoComplete="off" value="xxx"></td>
+                <td><div id="J_install_tip_admin_password"></div></td>
+            </tr>
+            <tr>
+                <td class="tar">确认密码：</td>
+                <td><input type="text" name="admin[confirm_password]" id="qr_manager_pwd"  class="input" value="xxx" autoComplete="off"></td>
+                <td><div id="J_install_tip_admin_confirm_password"></div></td>
+            </tr>
+        </table>
+        
+        <table width="100%">
+            <tr>
+                <td class="td1" width="100">站点基本信息</td>
+                <td class="td1" width="200">&nbsp;</td>
+                <td class="td1">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="tar">网站标题：</td>
+                <td><input type="text" name="site[title]" class="input" id="webtitle" value="zytm"></td>
+                <td><div id="J_install_tip_site_title"></div></td>
+            </tr>
+            <tr>
+                <td class="tar">网站简介：</td>
+                <td><textarea name="site[description]" cols="30" rows="5" class="input"></textarea></td>
+            </tr>
+        </table>
+	</div>
+	 <input type="hidden" name="webPath" value="/" />
+        <div id="J_response_tips" style="display:none;"></div>
+    <div class="bottom tac"> <a href="<?php echo U('CheckEnv/Index');?>" class="btn_old" id="install_pri">上一步</a>
+        <button type="submit" class="btn_old btn_submit J_install_btn" id="install_create">创建数据</button>
+    </div>
+</form>	
+<div  style="width:0;height:0;overflow:hidden;">
+    <img src="/demo/Public/images/install/pop_loading.gif">
+</div>
+
+<!-- js 
+<script src="/demo/Public/javascripts/install/jquery.js?v=9.0"></script>
+<script src="/demo/Public/javascripts/install/validate.js?v=9.0"></script>
+<script src="/demo/Public/javascripts/install/ajaxForm.js?v=9.0"></script>
+-->
+ <script type="text/javascript" src="/weixin/Public/javascripts/install/installing.js" ></script>
+
+        </div>
+    </div>
+    <div class="footer"> &copy; 2016.
+    <a href="http://www.zytm913.com" target="_blank">中亚通茂科技有限公司</a>
+</div>
+
+</body>
+</html>

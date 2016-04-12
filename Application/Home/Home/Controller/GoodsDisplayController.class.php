@@ -1,8 +1,7 @@
 <?php
 	namespace Home\Controller;
 	use Think\Controller;
-	
-	
+
 	class GoodsDisplayController extends Controller{
 		
 		Public function Index(){

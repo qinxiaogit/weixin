@@ -9,7 +9,7 @@
 		<volist name="goodsInfo" id="goods" >
               <tr>
                 <td><a href="{:U('Home/Goods/DisplayProduct')}?goodsName={$goods.goods_name}">{$goods.goods_name}</a></td>
-                <td>{$goods.goods_image_name}</td>
+                <td>{$goods.goods_info}</td>
                 <td><a href="{:U('Home/Goods/EditProduct')}?goodsName={$goods.goods_name}">编辑</a></td>
               </tr>
         </volist>
