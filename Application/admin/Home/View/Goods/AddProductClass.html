@@ -1,21 +1,42 @@
-<div id="main">
-	<div>
-	          产品类名:<input type="text" value="" style="width: 350px; height: 30px;" />
-	          <div id="addStation" style="display: inline; left: 200px;"></div>
+	<div class="row"><br><br><br></div>
+	<div class="row">
+	<div class="col-md-2">
 	</div>
-	<div>
-		产品简介:<textarea value="" style="overflow:auto;" rows="5" cols="50"></textarea>
+	<div class="col-md-10">
+		<form action="" class="form" method=""></form>
+	   <label  >产品类名称:</label>
+    	<input class="form-control" id="goods_name" name="goods_name" type="text" />
+		<label >所属产品:</label>
+    	<select class="form-control" name="goods_id">
+    		<option style="width: 175px;">顶层产品类</option>
+        	<volist name="Authlist" id="auth">
+				<option style="width: 175px;">{$auth.goods_name}</option>
+			</volist>
+    	</select>
+		<label>产品类简介:</label>
+		<textarea value="" class="form-control"></textarea>
 	</div>
-	<button id="btqr" class="btn btn-primary">确认提交</button>
-	<button id='btqx' class="btn btn-primary">取消提交</button>
-</div> 
-
+	</div>
+	<div class="row">
+		<br><br>
+	</div>
+	<div class="row">
+			<div class="col-md-4">
+			</div>
+		<div class="col-xs-3">
+			<button id="btqr" class="btn btn-primary">确认提交</button>
+		</div>
+		<div class="col-xs-2"></div>
+		<div class="col-xs-3">	
+			<button id='btqx' class="btn btn-primary ">取消提交</button>
+		</div>
+	</div>
 <script >
 	$(function(){
 		$('#btqr').click(function(){
-			
 			var productName = $('input').val();
 			var productDes  = $('textarea').val();
+			var productPri  = $('select').find("option:selected").text();
 			if(!productDes||!productName){
 				alert("产品名称或产品简介不能为空");
 				return false;
@@ -25,8 +46,8 @@
 			
 			//data['productName'] = productName ;
 			//var data= productDes;
-			var data = {"productName":productName,"productDes":productDes};
-			
+			var data = {"productPri":productPri,"productName":productName,"productDes":productDes};
+			console.log(data);
 			var url = "{:U('Home/Goods/AddProductClassToDb')}";
 			$.ajax({
 			type:"POST",
@@ -47,14 +68,9 @@
 			,
 		error:function(callbackData){
 			//console.log(callbackData);
-			
-		}
-		
+			}
 		});
-		
 		})
-		
-		
 		
 		$('#btqx').click(function(){
 			window.location = "{:U('Home/Home')}";

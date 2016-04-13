@@ -19,13 +19,13 @@
 	        $password = '';
 	        $db=new \PDO($dsn, $username, $password);
 			$db->query("SET NAMES utf8");
-	        $sql="select goods_name,goods_info from zytm_Goods order by rand() limit 0,5";
+	        $sql="select goods_name,goods_info,goods_preview_image_path from zytm_Goods order by rand() limit 0,5";
 	        $prepare=$db->prepare($sql);
 	        $prepare->execute();//添加条件数据
 	        $table = $prepare->fetchAll();
-	        
+			
 			$this->assign('goodstable',$table);
-	
+			//$this->assign('url',WEB_ROOT.'Public/Uploads/'.$table['goods_preview_image_path']);
 			$this->assign('goods',$goodinfo);
 			$this->display();
 		}

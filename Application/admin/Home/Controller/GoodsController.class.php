@@ -53,25 +53,13 @@
 			
 			$this->display();
 		}
-		
 		//添加产品类
 		public function AddProductClass(){
-			
+			$ProductClass = D('ProductMenu');
+			//获取产品大类
+			$data = $ProductClass->getAuthId();
+			$this->assign('Authlist',$data);
 			$this->display(); // 输出模板
-		}
-		/*文件上传支持
-		 * 文件上传成功，返回文件的名称
-		 */
-		private function UploadFile(){
-			$upload = new \Think\Upload();// 实例化上传类
-			$upload->maxSize = 3145728 ;// 设置附件上传大小
-			$upload->exts = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-			$upload->autoSub = true;
-			$upload->subName = array('date','Y-m-d');
-			$upload->saveName = time().'_'.mt_rand();
-			$upload->rootPath = WEB_ROOT.'Public/Uploads/'; // 设置附件上传根目录
-			
-			return  $upload->uploadOne($_FILES['goods_image']);
 		}
 		
 		//添加产品到数据库
@@ -95,12 +83,15 @@
 			
 			//判断是否为修改操作
 			if($method=="add"){
-				$fileinfo = $this->UploadFile();
+				$fileinfo = UploadFile();
 				if(!$fileinfo){
 					$this->error("上传文件失败");
 				}
-				$fileinfo = $fileinfo['savepath'].$fileinfo['savename'];
-				if($goods->SetDataToDb($goodsName,$goodsSimple,$goodsId,$goods_priview_html,$fileinfo)){
+				$file = $fileinfo['savepath'].$fileinfo['savename'];
+				
+				CreateImg(WEB_ROOT.'Public/Uploads/'.$file,WEB_ROOT.'Public/Uploads_SN/'.$fileinfo['savepath'],$fileinfo['savename']);
+				
+				if($goods->SetDataToDb($goodsName,$goodsSimple,$goodsId,$goods_priview_html,$file)){
 					$this->success("添加产品成功");
 				}else{
 					$this->error("添加产品失败");
@@ -125,9 +116,14 @@
 				
 			$productName = I('post.productName');
 			$productDes  = I('post.productDes');
-			
+			$productPri  = I('post.productPri');
 			$menu = D('ProductMenu');
-			if($menu->AddProductData($productName,$productDes)){
+			$PriGoodsId = 0 ;
+			if($productPri!="顶层产品类"){
+				$PriGoodsId = $menu->getProductIdToName($productPri);
+			}
+			 
+			if($menu->AddProductData($productName,$productDes,$PriGoodsId)){
 				
 				$this->ajaxSucceReturn("操作成功");
 			}else{

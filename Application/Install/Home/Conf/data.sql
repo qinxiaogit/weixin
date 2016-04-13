@@ -30,6 +30,7 @@ CREATE TABLE `zytm_goods` (
 #产品大类表
 DROP TABLE IF EXISTS `zytm_product_menu`;
 CREATE TABLE `zytm_product_menu` (
+	`goods_prev_id` int  DEFAULT 0 COMMENT '隶属于产品编码',
 	`goods_name` varchar(100) NOT NULL COMMENT '产品名字',
 	`goods_id`   int	 NOT NULL AUTO_INCREMENT COMMENT  '产品编号',
 	`goods_maininfo` varchar(100) NOT NULL COMMENT '产品简介',

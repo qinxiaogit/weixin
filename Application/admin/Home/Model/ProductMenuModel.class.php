@@ -11,7 +11,7 @@ class ProductMenuModel	extends Model{
 	}
 	//根据产品的名字获取产品ID
 	public function getProductIdToName($goodsname){
-		$productInfo = $this->where('goods_name=$goodsname')->select();
+		$productInfo = $this->where('goods_name="'.$goodsname.'"')->select();
 		
 		return $productInfo[0]['goods_id'];
 	}
@@ -23,14 +23,13 @@ class ProductMenuModel	extends Model{
 	/*
 	 *支持以值的形式传入，也支持以数组格式传入 
 	 */
-	public function AddProductData($ProductName,$ProductDes){
+	public function AddProductData($ProductName,$ProductDes,$ProductPri){
 		
 		if(!isset($ProductDes)||!isset($ProductDes)){
 			return FALSE;
 		}
-		
 		try{
-			$this->add(array('goods_name'=>$ProductName,'goods_maininfo'=>$ProductDes));
+			$this->add(array('goods_name'=>$ProductName,'goods_maininfo'=>$ProductDes,'goods_prev_id'=>$ProductPri));
 		}catch(\Exception $e){
 			/*出现已存在的name时执行下列代码
 			$MaxId = $this->max('goods_id');
