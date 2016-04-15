@@ -13,5 +13,6 @@ return array(
     //默认主键
     'DEFAULT_TABLE_PREFIX'=>'zytm_',
     // 默认模块 
-    'SYSTEM_CONFIG_PATH' => WEB_ROOT.'Application/Admin/Home/Conf/InstallInfo.php'
+    'SYSTEM_CONFIG_PATH' => WEB_ROOT.'Application/Admin/Home/Conf/InstallInfo.php',
+	'SYSTEM_CONFIG_PATH_HOME'=>WEB_ROOT.'Application/Home/Home/Conf/InstallInfo.php'
 	);

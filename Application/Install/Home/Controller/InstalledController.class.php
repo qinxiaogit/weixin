@@ -194,6 +194,9 @@ private function selectDb($dbName) {
         if (false === file_put_contents(C('SYSTEM_CONFIG_PATH'), $data)) {
             return false;
         }
+		if (false === file_put_contents(C('SYSTEM_CONFIG_PATH_HOME'), $data)) {
+            return false;
+        }
 
         chmod(C('SYSTEM_CONFIG_PATH'), 0777);
         return true;

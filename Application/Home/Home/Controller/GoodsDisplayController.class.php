@@ -1,7 +1,8 @@
 <?php
 	namespace Home\Controller;
 	use Think\Controller;
-
+	use Home\Logic;
+	
 	class GoodsDisplayController extends Controller{
 		
 		Public function Index(){
@@ -10,10 +11,8 @@
 			//查询所有的大类
 			//select * from 表明 order by rand() limit 0,5;
 			$goodinfo = $goodsclass->select();
-			//随机查出10个产品，进行展示
-			
-			//$goods->
-		
+			//随机查出10个产品，进行展示		
+			//$goods->	
 			$dsn = 'mysql:dbname=test;host=localhost;port=3306';
 	        $username = 'root';
 	        $password = '';
@@ -28,6 +27,10 @@
 			//$this->assign('url',WEB_ROOT.'Public/Uploads/'.$table['goods_preview_image_path']);
 			$this->assign('goods',$goodinfo);
 			$this->display();
+		}
+		public function test(){
+			$goodclass = new \Home\Logic\DisplayGoodsClassLogic("product_menu","goods");
+			$goodclass->GetChildGoods($goodclass->GetChildClassInfo('软件'));
 		}
 	}	
 ?>

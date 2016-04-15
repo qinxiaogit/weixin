@@ -21,8 +21,6 @@ class IndexController extends CommonController
        //重定向到指定的URL地址
 	   //redirect('http://www.baidu.com', 5, '页面跳转中...');
        //$this->redirect('CheckEnv/Index','', 5, '页面跳转中...');
-       //$this->success("加载成功",U('Index/SayHello'),10);
-	   
-	   
+       //$this->success("加载成功",U('Index/SayHello'),10)
     }
 }

@@ -1,5 +1,5 @@
 <?php
-	   namespace Home\Controller;
+	namespace Home\Controller;
 	use Think\Controller ;
 	
 	class CommonController extends Controller{
