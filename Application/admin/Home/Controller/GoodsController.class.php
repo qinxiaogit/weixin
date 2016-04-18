@@ -98,7 +98,7 @@
 				}
 			}else if($method=="edit"){
 				
-				$fileinfo = $this->UploadFile();
+				$fileinfo = UploadFile();
 				if($fileinfo){
 					$data['goods_preview_image_path'] = $fileinfo['savepath'].$fileinfo['savename'];
 					//上传图片成功-》删除原来预览图

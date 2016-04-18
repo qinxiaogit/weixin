@@ -1,7 +1,6 @@
-<div class="col-md-1">
-	
+<div class="col-md-2">	
 </div>
-<div class="col-md-11">
+<div class="col-md-10">
 	<form class="form" action="{:U('Home/Goods/AddProductToDb')}?method=edit" method="post" enctype="multipart/form-data">
     <label  >产品名称:</label>
     <input class="form-control" id="goods_name" name="goods_name" type="text" value="{$goodsname}" />
@@ -34,7 +33,7 @@
 		"maximumWords" : 100000    
 	});
 	ue.ready(function(){
-		ue.setContent("{$goods_preview}");
+		ue.setContent('{$goods_preview}');
 	});
 	
 	//console.log(ue);
