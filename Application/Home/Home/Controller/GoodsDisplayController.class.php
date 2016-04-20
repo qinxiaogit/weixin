@@ -40,25 +40,26 @@
 		}
 		//设置页面数据信息->类+产品预览
 		private function GetGoodsData($goodsClassName=""){
-			//
+			
 			$goodclass = new \Home\Logic\DisplayGoodsClassLogic("product_menu","goods");
 			$goodsId = 0 ;
 			if(!empty($goodsClassName)){
 				$goodsId = $goodclass->getGoodsClassIdToGoodsName($goodsClassName);
 			}
-			//获取子类
+			//获取子类 
 			$childClass = $goodclass->GetChildClassGoods($goodsId,5);
 			//检测是该类是否为还有子类
+			//var_dump($goodsClassName);
 			if(sizeof($childClass)){
 				foreach($childClass as $key => $value) {
 					$childClass[$key]['child']=$this->GetGoodsData($value['goods_name']);
 				}
 			}else{
 				//判断是否有子产品存在
-				$childgood = $goodclass->GetChildGoods($goodsId); 		
+				$childgood = $goodclass->GetChildGoods($goodsId); 
 				if(sizeof($childgood)){
 					$childClass['goods'] = $childgood ;
-				}
+				}     
 				//无子产品
 			}
 			return $childClass ;
@@ -70,8 +71,9 @@
 		}
 		public function goodsClassDisplay(){
 			$this->SetPageHeader();
-			
-			$this->assign('goodsinfo',$this->GetGoodsData());
+			//[1]['child']
+			//var_dump($this->GetGoodsData('软件')[1]['child']);
+			$this->assign('goodsinfo',$this->GetGoodsData('矩阵'));
 			$this->display();
 		}
 		

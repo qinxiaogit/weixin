@@ -53,7 +53,7 @@
 		 * $GoodsClassName:产品子类名
 		 * $count:获取数据条数
 		 */
-		public function GetChildGoods($GoodsClassId,$count="2"){
+		public function GetChildGoods($GoodsClassId,$count="5"){
 		
 			if(!isset($GoodsClassId)){
 				throw_exception("产品类信息为空");
@@ -64,7 +64,7 @@
 			return $this->GoodsTable->where('goods_prev_id="'.$GoodsClassId.'"')->limit($count)->select();
 		}
 		//获取子产品类
-		public function GetChildClassGoods($GoodsClassId,$count="2"){
+		public function GetChildClassGoods($GoodsClassId,$count="5"){
 				if(!isset($GoodsClassId)){
 				throw_exception("产品类信息为空");
 			}	

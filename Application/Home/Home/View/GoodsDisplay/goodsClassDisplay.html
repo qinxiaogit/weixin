@@ -20,16 +20,26 @@
 		          </volist>
 	            </nav>
 	      	</div>
-	      	<div>
-	      	<volist name="goodsinfo" id="goods">
-	      		<div class="row">
-	      			<div class="col-xs-11"><p>{$goods.goods_name}</p></div>
+	      	<div>	
+	      	<foreach name="goodsinfo" item="goods">
+				<div class="row">
+	      			<div class="col-xs-11"><p><b>{$goods.goods_name}</b></p></div>
 	      			<div class="col-xs-1"><a>更多</a></div>
-	      		</div>
-	      		<IF condition="($goodsInfo.goods)">
-	      			
+	      		</div>    		
+	      		<assign name="var" value="$goods.child.goods" />
+	      		<IF condition="sizeof($var) neq 0"> 
+	      			<foreach name="var" item="childGoods">
+	      				<div class="row">
+	      					<p class="text-center">{$childGoods.goods_name}:</p>
+	      				</div>
+	      				<div class="row" >  			
+							<img alt="" src="__PUBLIC__/Uploads_SN/{$childGoods.goods_preview_image_path}" class="img-responsive img-thumbnail img-rounded center-block">
+  						</div>
+	      				
+				      		
+	      			</foreach>	
 	      		</IF>
-	      	</volist>
+			</foreach>
       		</div>
     </div>
 	</body>
