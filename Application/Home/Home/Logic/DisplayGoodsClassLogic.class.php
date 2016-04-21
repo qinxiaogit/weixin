@@ -53,7 +53,7 @@
 		 * $GoodsClassName:产品子类名
 		 * $count:获取数据条数
 		 */
-		public function GetChildGoods($GoodsClassId,$count="5"){
+		public function GetChildGoods($GoodsClassId,$count="1"){
 		
 			if(!isset($GoodsClassId)){
 				throw_exception("产品类信息为空");
@@ -73,6 +73,35 @@
 			}	
 			return $this->GoodsMeumTable->where('goods_prev_id="'.$GoodsClassId.'"')->limit($count)->select();		
 		}
-		
-		
+		//获取相同类型下的子类
+		public function GetClassGoods($GoodsClassId,$count="5"){
+			if(!isset($GoodsClassId)){
+				throw_exception("产品类信息为空");
+			}	
+			if(!isset($this->GoodsMeumTable)){
+				throw_exception("逻辑操作对象产生失败");
+			}
+			//根据该产品ID，查出父产品ID
+			$tempData = $this->GoodsMeumTable->where('goods_id="'.$GoodsClassId.'"')->limit(1)->select();		
+			
+			return 	$this->GoodsMeumTable->where('goods_prev_id="'.$tempData[0]['goods_prev_id'].'"')->limit($count)->select();	
+		}
+		//随机获取产品
+		public function GetRandGoods($ClassName,$count){
+			//如果产品类名为""
+			if(!isset($ClassName)){
+				 $sql="select goods_name,goods_info,goods_preview_image_path from zytm_Goods order by rand() limit 0,$count";
+				return $this->$GoodsTable->query($sql);
+			}else{
+				//先查询该产品类的ID
+				$goodsclassId = $this->GoodsMeumTable->where('goods_name="'.$ClassName.'"')->select();
+				//再在该类下查询子产品
+				return $this->GetChildGoods($goodsclassId[0]['goods_id'],$count);	
+			}	
+		}
+		//获取页面信息
+		public function GetPageInfo($goodsName)
+		{	
+			return $this->GoodsTable->getFieldBygoods_name($goodsName,'goods_image_name');
+		}
 	}

@@ -10,12 +10,12 @@
 		<link href="__PUBLIC__/stylesheets/home/style.css" rel="stylesheet" />
 	</head>
 	<body>
-		<div class="container">
+		<div class="container-fluid">
 			<div class="blog-masthead">
 	        	<nav class="blog-nav">
 	        	  <volist name="goods" id="GoodsClass">		
 		         	<div class="blog-nav-item">
-		         		<a id="goodsclass" href="{:U('/GoodsDisplay/Index')}?GoodsClassName={$GoodsClass.goods_name}">{$GoodsClass.goods_name}</a>
+		         		<a id="goodsclass" href="{:U('/GoodsDisplay/goodsClassDisplay')}?GoodsClass={$GoodsClass.goods_name}">{$GoodsClass.goods_name}</a>
 		         	</div>
 		          </volist>
 	            </nav>
@@ -23,8 +23,8 @@
 	      	<div>	
 	      	<foreach name="goodsinfo" item="goods">
 				<div class="row">
-	      			<div class="col-xs-11"><p><b>{$goods.goods_name}</b></p></div>
-	      			<div class="col-xs-1"><a>更多</a></div>
+	      			<div class="col-xs-10"><p><b>{$goods.goods_name}</b></p></div>
+	      			<div class="col-xs-2"><a href="{:U('/GoodsDisplay/goodsDisplay')}?GoodsClass={$goods.goods_name}">更多</a></div>
 	      		</div>    		
 	      		<assign name="var" value="$goods.child.goods" />
 	      		<IF condition="sizeof($var) neq 0"> 
@@ -33,10 +33,13 @@
 	      					<p class="text-center">{$childGoods.goods_name}:</p>
 	      				</div>
 	      				<div class="row" >  			
-							<img alt="" src="__PUBLIC__/Uploads_SN/{$childGoods.goods_preview_image_path}" class="img-responsive img-thumbnail img-rounded center-block">
-  						</div>
-	      				
-				      		
+							<div class="col-xs-10">
+							<a href="{:U('/GoodsDisplay/goodsInfo')}?GoodsName={$childGoods.goods_name}"><img alt="Responsive image" src="__PUBLIC__/Uploads_SN/{$childGoods.goods_preview_image_path}" class="img-responsive img-thumbnail img-rounded center-block">
+  							</a>
+							</div>
+  							<div class="col-xs-2"></div>
+	      				</div>
+	      			
 	      			</foreach>	
 	      		</IF>
 			</foreach>

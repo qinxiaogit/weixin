@@ -1,0 +1,88 @@
+[ 2016-04-21T09:58:21+08:00 ] ::1 /weixin/install.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-21T13:44:14+08:00 ] ::1 /weixin/Install.php/CheckEnv/Index.shtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.164009s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.028002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.028002s ]
+NOTIC: [4096] Argument 1 passed to Home\Controller\CheckEnvController::getDirctoriesState() must be of the type array, null given, called in C:\web\www\weixin\Application\Install\Home\Controller\CheckEnvController.class.php on line 46 and defined C:\web\www\weixin\Application\Install\Home\Controller\CheckEnvController.class.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\web\www\weixin\Application\Install\Home\Controller\CheckEnvController.class.php 第 93 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\web\www\weixin\Application\Install\Home\Controller\CheckEnvController.class.php 第 113 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.007001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.007001s ]
+NOTIC: [8] Undefined variable: systemInfo C:\web\www\weixin\Application\Install\Runtime\Cache\Home\01f2ebb3856ee322a66c54a068fd1c7b.php 第 37 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.126008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.126008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.020001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.020001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010000s ]
+
+[ 2016-04-21T13:44:18+08:00 ] ::1 /weixin/Install.php/Installing/Index.shtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-21T13:44:21+08:00 ] ::1 /weixin/Install.php/CheckEnv/Index.shtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016600s ]
+NOTIC: [4096] Argument 1 passed to Home\Controller\CheckEnvController::getDirctoriesState() must be of the type array, null given, called in C:\web\www\weixin\Application\Install\Home\Controller\CheckEnvController.class.php on line 46 and defined C:\web\www\weixin\Application\Install\Home\Controller\CheckEnvController.class.php 第 90 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\web\www\weixin\Application\Install\Home\Controller\CheckEnvController.class.php 第 93 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\web\www\weixin\Application\Install\Home\Controller\CheckEnvController.class.php 第 113 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: systemInfo C:\web\www\weixin\Application\Install\Runtime\Cache\Home\01f2ebb3856ee322a66c54a068fd1c7b.php 第 37 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

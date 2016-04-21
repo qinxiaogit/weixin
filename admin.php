@@ -19,9 +19,8 @@ define('WEB_ROOT', dirname(__FILE__) . '/');
 
 // 定义应用目录
 define('APP_NAME', 'admin');
-define('APP_PATH', './Application/admin/');
+define('APP_PATH', './Application/admin/');;
 define('THINK_PATH', realpath('./ThinkPHP') . '/');
-
 // 运行缓存目录
 define('RUNTIME_PATH', WEB_ROOT . './Application/Cache/Runtime/' . APP_NAME . '/');
 

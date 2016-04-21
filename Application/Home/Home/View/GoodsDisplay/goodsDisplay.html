@@ -15,20 +15,19 @@
         <nav class="blog-nav">
         	<volist name="goods" id="GoodsClass">		
 	         	<div class="blog-nav-item">
-	         		<a id="goodsclass" href="{:U('/GoodsDisplay/Index')}?GoodsClassName={$GoodsClass.goods_name}">{$GoodsClass.goods_name}</a>
+	         		<a id="goodsclass" href="{:U('/GoodsDisplay/goodsDisplay')}?GoodsClass={$GoodsClass.goods_name}">{$GoodsClass.goods_name}</a>
 	         	</div>
 	        </volist>
         </nav>
       </div>
     </div>
-		<div class="container-fluid">
-	
-			<div class="row"><br><br><br></div>
-			
-			<volist name="goodstable" id="GoodsClass">
+	<div class="container-fluid">
+	<div class="row"><br><br><br></div>
+	 <volist name="goodstable" id="GoodsClass">
 			<div class="row">
   				<div class="col-xs-6" >  			
-					<img  style="width: 100%; height: 20%;" alt="" src="__PUBLIC__/Uploads_SN/{$GoodsClass.goods_preview_image_path}" class="img-responsive img-thumbnail img-rounded center-block">
+					<a href="{:U('/GoodsDisplay/goodsInfo')}?GoodsName={$GoodsClass.goods_name}"><img  style="width: 100%; height: 20%;" alt="" src="__PUBLIC__/Uploads_SN/{$GoodsClass.goods_preview_image_path}" class="img-responsive img-thumbnail img-rounded center-block">
+  					</a>
   				</div>
   				<div class="col-xs-6 center-align">
   					<b><p >{$GoodsClass.goods_name}:</p></b>
@@ -38,7 +37,9 @@
   				</div>
     		 </div>
 			<hr />
-			</volist>
-		 </div>
+		</volist>
+			
+	</div>
 	</body>
 </html>
+

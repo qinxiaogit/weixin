@@ -8,7 +8,7 @@
 		Public function Index(){
 			//找出所有产品类--
 			$goodsclass = new \Think\Model('ProductMenu','zytm_','mysql://root:@localhost/test#utf8');
-			//查询所有的大类
+			//查询类下的大类
 			//select * from 表明 order by rand() limit 0,5;
 			$goodinfo = $goodsclass->select();
 			//随机查出10个产品，进行展示		
@@ -28,7 +28,16 @@
 			$this->assign('goods',$goodinfo);
 			$this->display();
 		}
-		//设置页面头
+		//设置产品页面头
+		private function SetGoodsPageHeader($ClassName=""){
+			$goodclass = new \Home\Logic\DisplayGoodsClassLogic("product_menu","goods");
+			$goodsId = 0 ;
+			if(!empty($ClassName)){
+				$goodsId = $goodclass->getGoodsClassIdToGoodsName($ClassName);
+			}
+			$data = $goodclass->GetClassGoods($goodsId ,5);
+			$this->assign('goods',$data);
+		}
 		private function SetPageHeader($ClassName=""){
 			$goodclass = new \Home\Logic\DisplayGoodsClassLogic("product_menu","goods");
 			$goodsId = 0 ;
@@ -64,17 +73,37 @@
 			}
 			return $childClass ;
 		}
-	
-		public function test(){
+		//设置某个产品类下的所有产品到页面
+		private function SetGoodsInfo($GoodsclassName=""){
+			//未设置产品类，随机从产品类中抓取几条产品信息
 			$goodclass = new \Home\Logic\DisplayGoodsClassLogic("product_menu","goods");
-			$goodclass->GetChildGoods($goodclass->getGoodsClassIdToGoodsName('软件'));
+			
+			$this->assign('goodstable',$goodclass->GetRandGoods($GoodsclassName,10));
+			
 		}
+	
+		public function goodsDisplay(){
+			$this->SetGoodsPageHeader(I('get.GoodsClass'));
+			$this->SetGoodsInfo(I('get.GoodsClass'));
+			
+			$this->display();
+		}
+		
 		public function goodsClassDisplay(){
 			$this->SetPageHeader();
 			//[1]['child']
 			//var_dump($this->GetGoodsData('软件')[1]['child']);
-			$this->assign('goodsinfo',$this->GetGoodsData('矩阵'));
+			$this->assign('goodsinfo',$this->GetGoodsData(I('get.GoodsClass')));
 			$this->display();
+		}
+		public function goodsInfo(){
+			
+			//获取产品页面信息
+			$goodclass = new \Home\Logic\DisplayGoodsClassLogic("product_menu","goods");
+			
+		 	$this->assign('goodsinfo',$goodclass->GetPageInfo(I('get.GoodsName')));
+			$this->display();
+			
 		}
 		
 	}	
