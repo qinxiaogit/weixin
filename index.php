@@ -21,18 +21,13 @@ define('WEB_ROOT', dirname(__FILE__) . '/');
 //define('APP_PATH', './Application/Install/');
 
 
+// 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false
+define('APP_DEBUG',True);
+
 // 定义应用目录
-define('APP_NAME', 'Home');
-// 绑定index模块到当前入口文件
-define('BIND_MODULE','Home');
-define('APP_PATH', './Application/Home/');
-define('THINK_PATH', realpath('./ThinkPHP') . '/');
-
-// 运行缓存目录
-define('RUNTIME_PATH', WEB_ROOT . './Application/Cache/Runtime/' . APP_NAME . '/');
-
-// 开启调试
-define('APP_DEBUG', true);
+define('APP_PATH','./Application/');
+define("BIND_MODULE","Home");
+// 引入ThinkPHP入口文件
 
 // 引入ThinkPHP入口文件
-require THINK_PATH . 'ThinkPHP.php';
+require './ThinkPHP/ThinkPHP.php';

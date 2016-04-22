@@ -1,0 +1,85 @@
+<dic id='main'>
+	<div class="edithead">
+	<span>编辑管理员信息</span>
+	</div>
+	<table class="table">
+            <thead>
+              <tr>
+                <th>用户邮箱:</th>
+                <th><input id="UserName" type="text" /></th>
+                <th id="UserNameInputInfo"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>用登录密码:</th>
+                <th><input id="UserPassWd" type="password" /></th>
+                <th id="UserPasswdInputInfo"></th>
+              </tr>
+              </tr>
+              <tr>
+                <th>权限:</th>
+                <th>
+                <select id="UserAuth">
+					<volist name="Authlist" id="auth">
+						<option style="width: 175px;">{$auth.goods_name}</option>
+					</volist>
+						
+                </select>
+                </th>
+              </tr>
+              <tr>
+                <th>备注信息:</th>
+               <th><textarea value="描述管理员权限" id="UserMoreInfo"></textarea></th>
+              </tr>
+              <tr>
+              	<th><button class="btn btn-lg btn-primary" onclick="alterAuth();">确认修改</button></th>
+              	
+              	
+              	<th id="AuthEditInfo"></th>
+              </tr>
+            </tbody>
+        </table>
+</diV>
+<script>
+function alterAuth(){
+	var url = "{:U('/User/EditUserInfoToDb/')}";
+
+	var UserPassWd = $('#UserPassWd').val();
+	var UserName  = $('#UserName').val();
+	var UserMoreInfo = $('#UserMoreInfo').val();
+	var UserAuth = $('#UserAuth').val();
+	//判断密码是否为空
+	if(UserPassWd==""){
+		$('#UserPasswdInputInfo').html('<span style="color:red;">用户密码不能为空</span>');
+		return false;
+	}
+	//判断用户名是否为空
+	if(UserName==""){
+		$('#UserNameInputInfo').html('<span style="color:red;">用户邮箱不能为空</span>');
+		return false;
+	}//
+	//判断备注是否为空
+	if(UserMoreInfo==""){
+		UserMoreInfo = "无";
+	}
+	
+	var data = {"UserPassWd":UserPassWd,"UserName":UserName,"UserMoreInfo":UserMoreInfo,"UserAuth":UserAuth};	
+	$.ajax({
+		type:"post",
+		url:url,
+		data:data,
+		success:function(callbackdata){
+			console.log(callbackdata);
+			if(callbackdata.RequstStation){
+				$('#AuthEditInfo').html('<span style="color:green;">'+callbackdata.RequstInfo+'</span>');
+			}else{
+				$('#AuthEditInfo').html('<span style="color:red;">'+callbackdata.RequstInfo+'</span>');
+			}
+		},
+		error:function(callbackdata){
+			console.log(callbackdata);
+		}
+	});	
+	}
+</script>

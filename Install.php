@@ -20,18 +20,13 @@ if (version_compare(PHP_VERSION, '5.3.0', '<')) {
 define('WEB_ROOT', dirname(__FILE__) . '/');
 
 // 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false
-define('APP_DEBUG', true);
-
-//修改安全文件名
-//define('DIR_SECURE_FILENAME','default.html');
-
-//不希望生成安全目录
-//define('BUILD_DIR_SECURE',TRUE);
+// 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false
+define('APP_DEBUG',True);
 
 // 定义应用目录
-define('APP_PATH', './Application/Install/');
-// 绑定Admin模块到当前入口文件
-define('BIND_MODULE','Home');
+define('APP_PATH','./Application/');
+define("BIND_MODULE","install");
+
 
 // 引入ThinkPHP入口文件
 require './ThinkPHP/ThinkPHP.php';

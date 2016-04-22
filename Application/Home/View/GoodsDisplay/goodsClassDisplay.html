@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>成都中亚通茂科技股份公司</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link href="__PUBLIC__/stylesheets/home/bootstrap.min.css" rel="stylesheet"/>
+		<script src="__PUBLIC__/javascripts/home/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="__PUBLIC__/javascripts/home/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<link href="__PUBLIC__/stylesheets/home/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="blog-masthead">
+				<div class="container-fluid">
+	        	<nav class="blog-nav">
+	        	  <volist name="goods" id="GoodsClass">		
+		         	<div class="blog-nav-item">
+		         		<a  style="font-size:20px" id="goodsclass" href="{:U('/GoodsDisplay/goodsClassDisplay')}?GoodsClass={$GoodsClass.goods_name}">{$GoodsClass.goods_name}</a>
+		         	</div>
+		          </volist>
+	            </nav>
+	      	 </div>
+	      	</div>
+	      	<div class="container-fluid">
+	      	<foreach name="goodsinfo" item="goods">
+				<div class="row">
+	      			<div class="col-xs-12"><span style="font-size: 18px">{$goods.goods_name}</span><a style="font-size: x-large;" href="{:U('/GoodsDisplay/Index')}?GoodsClass={$goods.goods_name}"> &nbsp;>>></a></div>
+	      		</div>    		
+	      		<assign name="var" value="$goods.child.goods" />
+	      		<IF condition="sizeof($var) neq 0"> 
+	      			<foreach name="var" item="childGoods">
+	      				<div class="row" >  			
+							<div class="col-xs-6">
+							<a href="{:U('/GoodsDisplay/goodsInfo')}?GoodsName={$childGoods.goods_name}"><img alt="Responsive image" src="__PUBLIC__/Uploads_SN/{$childGoods.goods_preview_image_path}" class="img-responsive img-thumbnail img-rounded center-block">
+  							</a>
+							</div>
+  							<div class="col-xs-6">
+  								<div class="row">
+  									<div class="col-xs-12"><b><p >{$childGoods.goods_name}</p></b>
+  									</div>
+  									
+  								</div>
+  								<div class="row">
+  									<div class="col-xs-12"><span class="text-center">{$childGoods.goods_info}</b>
+  									</div>	
+  								</div>
+  							</div>
+	      				</div>
+	      				<hr>
+	      			</foreach>	
+	      		</IF>
+			</foreach>
+      	</div>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<div class="col-md-2">	
+</div>
+<div class="col-md-10">
+	<form class="form" action="{:U('/Goods/AddProductToDb')}?method=edit" method="post" enctype="multipart/form-data">
+    <label  >产品名称:</label>
+    <input class="form-control" id="goods_name" name="goods_name" type="text" value="{$goodsname}" />
+    <label >所属产品:</label>
+    <select class="form-control" name="goods_id" value="">
+        <volist name="Authlist" id="auth">
+			<option style="width: 175px;">{$auth.goods_name}</option>
+		</volist>
+    </select>
+	<label>产品简介</label>
+	<input class="form-control" id="goods_info" name="goods_simple" type="text" value="{$goodssimple}" />
+	<label>产品预览图</label>
+	<input class="form-control" name="goods_image" type="file"/>
+	<label>产品描述信息</label>
+	<textarea id="container" name="goods_priview_html"></textarea>
+	<input class="form-control btn-primary" type="submit" value="确认修改"/>
+</form>
+	<!--<button class="btn btn-primary col-md-12" id="CommitInfoDb">确      认</button>
+	-->
+</div>
+
+<script type="text/javascript" src="__PUBLIC__/Ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Ueditor/ueditor.all.js"></script>
+
+<script type="text/javascript">
+   //编辑器实例
+   var ue = UE.getEditor('container', {
+		"initialFrameWidth" : "100%",   // 宽
+		"initialFrameHeight" :"200px",  // 高
+		"maximumWords" : 100000    
+	});
+	ue.ready(function(){
+		ue.setContent('{$goods_preview}');
+	});
+	
+	//console.log(ue);
+	// ue.setContent('<p>new text</p>', true); 
+</script>
