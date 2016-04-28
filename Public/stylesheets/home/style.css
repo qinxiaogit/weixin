@@ -9,12 +9,11 @@
    				border-radius:15px;            /* W3C syntax */
 				float: right;
 				}
-			#goodsclass{
+			.goodsclass{
 				margin: 0px;
 				padding: 0px;
 				text-align: -webkit-center;
 				color:#FFFFFF;
-				
 			}
 			.center-vertical{
     			position:relative;

@@ -34,20 +34,23 @@
 			}
 			$goodsId = $goodclass->getGoodsClassIdToGoodsName($goodsClassName);
 			//获取子类 
-			$childClass = $goodclass->GetChildClassGoods($goodsId,5);
-			//检测是该类是否为还有子类
-			//var_dump($goodsClassName);
-			if(sizeof($childClass)){
-				foreach($childClass as $key => $value) {
-					$childClass[$key]['child']=$this->GetGoodsData($value['goods_name']);
+			if(isset($goodsId)){
+				//var_dump($goodsId);
+				$childClass = $goodclass->GetChildClassGoods($goodsId,5);
+				//检测是该类是否为还有子类
+				//var_dump($goodsClassName);
+				if(sizeof($childClass)){
+					foreach($childClass as $key => $value) {
+						$childClass[$key]['child']=$this->GetGoodsData($value['goods_name']);
+					}
+				}else{
+					//判断是否有子产品存在
+					$childgood = $goodclass->GetChildGoods($goodsId); 
+					if(sizeof($childgood)){
+						$childClass['goods'] = $childgood ;
+					}     
+					//无子产品
 				}
-			}else{
-				//判断是否有子产品存在
-				$childgood = $goodclass->GetChildGoods($goodsId); 
-				if(sizeof($childgood)){
-					$childClass['goods'] = $childgood ;
-				}     
-				//无子产品
 			}
 			return $childClass ;
 		}
@@ -63,6 +66,7 @@
 		public function Index(){
 			$this->SetGoodsPageHeader(I('get.GoodsClass'));
 			$this->SetGoodsInfo(I('get.GoodsClass'));
+			$this->assign('title',I('get.GoodsClass'));
 			$this->display();
 		}
 		
@@ -70,7 +74,14 @@
 			$this->SetPageHeader();
 			//[1]['child']
 			//var_dump($this->GetGoodsData('软件')[1]['child']);
-			$data = $this->GetGoodsData(I('get.GoodsClass'));
+			$GoodsClass = I('get.GoodsClass');
+			
+			if(!isset($GoodsClass)){
+				$GoodsClass = '天线';
+			}
+			$data = $this->GetGoodsData($GoodsClass);
+			
+			$this->assign('title',$GoodsClass);
 			$this->assign('goodsinfo',$data);
 			$this->display();
 		}
@@ -81,6 +92,7 @@
 			$goodclass = new \Home\Logic\DisplayGoodsClassLogic("product_menu","goods");
 			
 		 	$this->assign('goodsinfo',$goodclass->GetPageInfo(I('get.GoodsName')));
+			$this->assign('title',I('get.GoodsName'));
 			$this->display();
 			
 		}

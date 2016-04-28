@@ -7,19 +7,81 @@ use Com\Wechat;
 use Com\WechatAuth;
 
 class IndexController extends Controller{
+	
+	/*
+	 * 群发消息接口
+	 */
+	 public function Message(){
+	 	
+	 	$appid = 'wxcdf173c015ea4525'; //AppID(应用ID)
+        $token = 'ZYTM'; //微信后台填写的TOKEN
+        $crypt = 'XCaucpO70vGMxfSXIiKdMadhCmGwrwt2aIwUwnFD8Tb'; //消息加密KEY（EncodingAESKey）
+        $secret= '4652a7ab74eeb0c2bda8d29448ef44e4';
+        /* 加载微信SDK $appid, $secret, $token*/
+        $wechatAuth = new WechatAuth( $appid,$secret ,$token);
+		$wechatAuth->getAccessToken();
+		
+		$user = $wechatAuth->userGet();
+		
+		foreach ($user['data']['openid'] as $key => $value) {
+			$wechatAuth->messageCustomSend($value,"你好...");
+		}
+	 }
+	
+	/**
+	 * 创建自定义菜单接口,需要携带一个get参数进行验证name=zytm
+	 */
+	 public function  CreateMenu(){
+	 	//必须带参数且name=zytm或者ZYTM
+		$MenuYz = I('get.name');
+		if($MenuYz!="ZYTM"&&$MenuYz!="zytm"){
+			 header( " HTTP/1.0  404  Not Found" );
+             $this->display( 'Public:goods404' );
+			die;
+		}
+		$appid = 'wxcdf173c015ea4525'; //AppID(应用ID)
+        $token = 'ZYTM'; //微信后台填写的TOKEN
+        $crypt = 'XCaucpO70vGMxfSXIiKdMadhCmGwrwt2aIwUwnFD8Tb'; //消息加密KEY（EncodingAESKey）
+        $secret= '4652a7ab74eeb0c2bda8d29448ef44e4';
+        /* 加载微信SDK $appid, $secret, $token*/
+        $wechatAuth = new WechatAuth( $appid,$secret ,$token);
+        //secret:4652a7ab74eeb0c2bda8d29448ef44e4
+        
+        $button = array(array("name"=>"产品中心",
+							  "sub_button"=>array(
+							    array( "type"=>"view", 
+							       	   "name"=>"天线", 
+							           "url"=>"http://zytm913.com/weixin/index.php/GoodsDisplay/GoodsClassDisplay.html?GoodsClass=%E5%A4%A9%E7%BA%BF"),
+								array("type"=>"view", 
+							    	  "name"=>"共用器", 
+							          "url"=>"http://zytm913.com/weixin/index.php/GoodsDisplay/GoodsClassDisplay.html?GoodsClass=%E5%85%B1%E7%94%A8%E5%99%A8"),
+								array("type"=>"view", 
+							    	  "name"=>"矩阵", 
+							          "url"=>"http://zytm913.com/weixin/index.php/GoodsDisplay/GoodsClassDisplay.html?GoodsClass=%E7%9F%A9%E9%98%B5"),
+							    array("type"=>"view", 
+							    	  "name"=>"软件系统", 
+							          "url"=>"http://zytm913.com/weixin/index.php/GoodsDisplay/GoodsClassDisplay.html?GoodsClass=%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F")
+									 )),
+						array( 	
+	               			"type"=>"view",
+	               			"name"=>"联系我们",
+	               			"url"=>"http://zytm913.com/contact.asp")			 
+						);				   
+        	$wechatAuth->getAccessToken();
+			var_dump($wechatAuth->menuCreate($button));
+	 }
+	 
     /**
      * 微信消息接口入口
      * 所有发送到微信的消息都会推送到该操作
      * 所以，微信公众平台后台填写的api地址则为该操作的访问地址
      */
     public function index($id = ''){
-    	
-        	
         //调试
         try{
-            $appid = 'wx58aebef2023e68cd'; //AppID(应用ID)
-            $token = 'E9E05045F594065909D2B5554A8F34CE'; //微信后台填写的TOKEN
-            $crypt = 'q6FPCUoCQWaOiR3UUe5RfQu8A7hlJcMW4BnNyH9z2il'; //消息加密KEY（EncodingAESKey）
+            $appid = 'wxcdf173c015ea4525'; //AppID(应用ID)
+            $token = 'ZYTM'; //微信后台填写的TOKEN
+            $crypt = 'XCaucpO70vGMxfSXIiKdMadhCmGwrwt2aIwUwnFD8Tb'; //消息加密KEY（EncodingAESKey）
             
             /* 加载微信SDK */
             $wechat = new Wechat($token, $appid, $crypt);
@@ -29,7 +91,7 @@ class IndexController extends Controller{
 			
             if($data && is_array($data)){
                 /**
-                 * 你可以在这里分析数据，决定要返回给用户什么样的信息
+                 * 这里分析数据，决定要返回给用户什么样的信息
                  * 接受到的信息类型有10种，分别使用下面10个常量标识
                  * Wechat::MSG_TYPE_TEXT       //文本消息
                  * Wechat::MSG_TYPE_IMAGE      //图片消息
@@ -71,7 +133,7 @@ class IndexController extends Controller{
                  */
                 
                 //执行Demo
-                $this->demo($wechat, $data);
+                $this->WeChatRun($wechat, $data);
             }
         } catch(\Exception $e){
             file_put_contents('./error.json', json_encode($e->getMessage()));
@@ -80,16 +142,16 @@ class IndexController extends Controller{
     }
 
     /**
-     * DEMO
+     * 微信实例
      * @param  Object $wechat Wechat对象
      * @param  array  $data   接受到微信推送的消息
      */
-    private function demo($wechat, $data){
+    private function WeChatRun($wechat, $data){
         switch ($data['MsgType']) {
             case Wechat::MSG_TYPE_EVENT:
                 switch ($data['Event']) {
                     case Wechat::MSG_EVENT_SUBSCRIBE:
-                        $wechat->replyText('欢迎您关注麦当苗儿公众平台！回复“文本”，“图片”，“语音”，“视频”，“音乐”，“图文”，“多图文”查看相应的信息！');
+                        $wechat->replyText('欢迎您关注中亚通茂股份公众平台！回复“文本”，“图片”，“语音”，“视频”，“音乐”，“图文”，“多图文”查看相应的信息！');
                         break;
 
                     case Wechat::MSG_EVENT_UNSUBSCRIBE:
@@ -97,7 +159,7 @@ class IndexController extends Controller{
                         break;
 
                     default:
-                        $wechat->replyText("欢迎访问麦当苗儿公众平台！您的事件类型：{$data['Event']}，EventKey：{$data['EventKey']}");
+                        //$wechat->replyText("欢迎访问中亚通茂股份公众平台！您的事件类型：{$data['Event']}，EventKey：{$data['EventKey']}");
                         break;
                 }
                 break;
@@ -105,7 +167,7 @@ class IndexController extends Controller{
             case Wechat::MSG_TYPE_TEXT:
                 switch ($data['Content']) {
                     case '文本':
-                        $wechat->replyText('欢迎访问麦当苗儿公众平台，这是文本回复的内容！');
+                        $wechat->replyText('欢迎访问中亚通茂股份公众平台，这是文本回复的内容！');
                         break;
 
                     case '图片':
@@ -159,13 +221,14 @@ class IndexController extends Controller{
                         break;
                     
                     default:
-                        $wechat->replyText("欢迎访问麦当苗儿公众平台！您输入的内容是：{$data['Content']}");
+						//计划连接到图灵机器人进行处理
+                        $wechat->replyText("欢迎访问中亚通茂股份公众平台！您输入的内容是：{$data['Content']}");
                         break;
                 }
                 break;
             
             default:
-                # code...
+                
                 break;
         }
     }
@@ -176,8 +239,8 @@ class IndexController extends Controller{
      * @return string       媒体资源ID
      */
     private function upload($type){
-        $appid     = 'wx58aebef2023e68cd';
-        $appsecret = 'bf818ec2fb49c20a478bbefe9dc88c60';
+        $appid     = 'wxcdf173c015ea4525';
+        $appsecret = '4652a7ab74eeb0c2bda8d29448ef44e4';
 
         $token = session("token");
 

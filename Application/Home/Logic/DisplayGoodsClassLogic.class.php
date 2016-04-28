@@ -90,7 +90,7 @@
 		public function GetRandGoods($ClassName){
 			//如果产品类名为""
 			if(empty($ClassName)){
-				$sql="select goods_name,goods_info,goods_preview_image_path from zytm_Goods order by rand() limit 0,10" ;
+				$sql="select goods_name,goods_info,goods_preview_image_path from zytm_goods order by rand() limit 0,10" ;
 				return $this->GoodsTable->query($sql);
 			}else{
 				//先查询该产品类的ID

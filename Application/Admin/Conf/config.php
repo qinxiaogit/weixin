@@ -1,6 +1,6 @@
 <?php
 
-$install = include('InstallInfo.php');
+$install = include(WEB_ROOT.'/Application/Common/Conf/InstallInfo.php');
 $sysMenu = include('SysConfig.php');
 $config =  array(
 	//'配置项'=>'配置值'

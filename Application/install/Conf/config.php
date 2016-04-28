@@ -11,6 +11,7 @@ return array(
     
     //WEB_ROOT . 'Install/Data/database.sql',
 	'SYSTEM_SQL_PATH'=>WEB_ROOT.'Application/Install/Conf/data.sql',
+    'SYSTEM_CONFIG_PATH'=>WEB_ROOT.'Application/Common/Conf/InstallInfo.php',
     // 默认模块
     'MODULE_ALLOW_LIST' => array('Install'),
     'DEFAULT_MODULE' => 'Install',

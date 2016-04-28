@@ -472,6 +472,7 @@ class WechatAuth {
      * @param  string $param  GET请求参数
      * @return array          api返回结果
      */
+     //$this->api('menu/create', $data);
     protected function api($name, $data = '', $method = 'POST', $param = '', $json = true){
         $params = array('access_token' => $this->accessToken);
 
