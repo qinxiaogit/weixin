@@ -229,7 +229,7 @@ class WechatAuth {
 
         //根据类型附加额外数据
         $data[$type] = call_user_func(array(self, $type), $content);
-
+   
         return $this->api('message/custom/send', $data);
     }
 

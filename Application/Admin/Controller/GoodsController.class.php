@@ -1,7 +1,7 @@
 <?php
 	namespace Admin\Controller;
 	use 	Think\Controller;
-	
+	use 	Com\WechatAuth;
 	class GoodsController extends CommonController{
 	
 		//展示某个产品
@@ -69,8 +69,10 @@
 			$goodsName = I('post.goods_name');
 			$goodspro =  I('post.goods_id');
 			$method = I('get.method');
-		
-			//过滤引号
+			//推送给用户的消息
+			$ts_sation= I('ts_station');
+			
+			
 			$goods_priview_html = $_POST['goods_priview_html'];
 			
 			$goods = D('Goods');
@@ -88,10 +90,30 @@
 					$this->error("上传文件失败");
 				}
 				$file = $fileinfo['savepath'].$fileinfo['savename'];
-				
+				$thumb = WEB_ROOT.'Public/Uploads_SN/'.$fileinfo['savepath'].$fileinfo['savename'];
+				//CreateImg(WEB_ROOT.'Public/Uploads/'.$file,$thumb);
 				CreateImg(WEB_ROOT.'Public/Uploads/'.$file,WEB_ROOT.'Public/Uploads_SN/'.$fileinfo['savepath'],$fileinfo['savename']);
-				
 				if($goods->SetDataToDb($goodsName,$goodsSimple,$goodsId,$goods_priview_html,$file)){
+					//判断是否推送给用户
+					if($ts_sation=="on"){
+						//	/* 加载微信SDK $appid, $secret, $token*/
+        				$appid = C('APPID');//AppID(应用ID)
+        				$token = C('TOKEN'); //微信后台填写的TOKEN
+        				$crypt = C('CRYPT'); //消息加密KEY（EncodingAESKey）
+        				$secret= C('SECRET');//密钥
+        				$wechatAuth = new WechatAuth( $appid,$secret ,$token);
+						//上传缩略图资源到微信服务器
+						//$medid = $this->UpSourceToWx($wechatAuth, $filename)
+						//推送消息到用户    
+						$data =	array();				
+     					$data['title'] = $goodsName ;
+						$data['discription'] = $goodsSimple;
+						$data['url'] ='http://zytm913.com'."/weixin/index.php/GoodsDisplay/goodsInfo.html?GoodsName=$goodsName";
+						$data['picurl']= 'http://zytm913.com/weixin/Public/Uploads_SN/'.$fileinfo['savepath'].$fileinfo['savename']; ;
+     					//$data['url'] = "httl://www.baidu.com";
+						//$data['picurl'] = "http://pic1.win4000.com/pic/5/a1/be6d763263.jpg";
+						$this->NewGoodsTs($wechatAuth ,$data);
+					}
 					$this->success("添加产品成功");
 				}else{
 					$this->error("添加产品失败");
@@ -109,10 +131,31 @@
 				$goods->UpdataGoodsInfo($data,'goods_name="'.$goodsName.'"');
 				$this->success("更新产品信息成功");
 			}
-			
 		}
-		//添加产品类 到数据库
-		public function AddProductClassToDb(){
+
+
+	//发送消息
+	protected function NewGoodsTs($wechatAuth,$data){
+
+		$wechatAuth->getAccessToken();
+		$user = $wechatAuth->userGet();
+		foreach ($user['data']['openid'] as $key => $value) {
+			$wechatAuth->sendNewsOnce($value,$data['title'],
+											 $data['discription'],
+											 $data['url'],
+										 	 $data['picurl']
+			);
+		}	
+	}
+	//上传资源到微信服务器
+	protected function UpSourceToWx($wechatAuth,$filename){
+
+		return $wechatAuth->materialAddMaterial($filename,'thimb');
+	}
+	
+	
+	//添加产品类 到数据库
+	public function AddProductClassToDb(){
 				
 			$productName = I('post.productName');
 			$productDes  = I('post.productDes');

@@ -5,7 +5,7 @@ $sysMenu = include('SysConfig.php');
 $config =  array(
 	//'配置项'=>'配置值'
 	    // 默认模块
-	    'URL_HTML_SUFFIX'=>'.xhtml',
+	'URL_HTML_SUFFIX'=>'.xhtml',
     'MODULE_ALLOW_LIST' => array('Admin'),
 	'TMPL_ACTION_ERROR' => 'Common:jump',
     'TMPL_ACTION_SUCCESS' => 'Common:jump',

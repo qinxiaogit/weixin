@@ -8,21 +8,27 @@ use Com\WechatAuth;
 
 class IndexController extends Controller{
 	
+	private $appid ;
+	private $token;
+	private $crypt;
+	private $secret;
+	
+    public function __construct(){
+    	//初始化配置信息
+    	$this->appid = C('APPID');//AppID(应用ID)
+        $this->token = C('TOKEN'); //微信后台填写的TOKEN
+        $this->crypt = C('CRYPT'); //消息加密KEY（EncodingAESKey）
+        $this->secret= C('SECRET');//密钥
+    }
 	/*
 	 * 群发消息接口
 	 */
 	 public function Message(){
-	 	
-	 	$appid = 'wxcdf173c015ea4525'; //AppID(应用ID)
-        $token = 'ZYTM'; //微信后台填写的TOKEN
-        $crypt = 'XCaucpO70vGMxfSXIiKdMadhCmGwrwt2aIwUwnFD8Tb'; //消息加密KEY（EncodingAESKey）
-        $secret= '4652a7ab74eeb0c2bda8d29448ef44e4';
+	 		
         /* 加载微信SDK $appid, $secret, $token*/
-        $wechatAuth = new WechatAuth( $appid,$secret ,$token);
+        $wechatAuth = new WechatAuth( $this->appid,$this->secret ,$this->token);
 		$wechatAuth->getAccessToken();
-		
 		$user = $wechatAuth->userGet();
-		
 		foreach ($user['data']['openid'] as $key => $value) {
 			$wechatAuth->messageCustomSend($value,"你好...");
 		}
@@ -39,12 +45,8 @@ class IndexController extends Controller{
              $this->display( 'Public:goods404' );
 			die;
 		}
-		$appid = 'wxcdf173c015ea4525'; //AppID(应用ID)
-        $token = 'ZYTM'; //微信后台填写的TOKEN
-        $crypt = 'XCaucpO70vGMxfSXIiKdMadhCmGwrwt2aIwUwnFD8Tb'; //消息加密KEY（EncodingAESKey）
-        $secret= '4652a7ab74eeb0c2bda8d29448ef44e4';
         /* 加载微信SDK $appid, $secret, $token*/
-        $wechatAuth = new WechatAuth( $appid,$secret ,$token);
+        $wechatAuth = new WechatAuth( $this->appid,$this->secret ,$this->token);
         //secret:4652a7ab74eeb0c2bda8d29448ef44e4
         
         $button = array(array("name"=>"产品中心",
@@ -79,12 +81,8 @@ class IndexController extends Controller{
     public function index($id = ''){
         //调试
         try{
-            $appid = 'wxcdf173c015ea4525'; //AppID(应用ID)
-            $token = 'ZYTM'; //微信后台填写的TOKEN
-            $crypt = 'XCaucpO70vGMxfSXIiKdMadhCmGwrwt2aIwUwnFD8Tb'; //消息加密KEY（EncodingAESKey）
-            
             /* 加载微信SDK */
-            $wechat = new Wechat($token, $appid, $crypt);
+            $wechat = new Wechat($this->token, $this->appid, $this->crypt);
             
             /* 获取请求信息 */
             $data = $wechat->request();
@@ -132,7 +130,7 @@ class IndexController extends Controller{
                  * 
                  */
                 
-                //执行Demo
+                //执行消息处理
                 $this->WeChatRun($wechat, $data);
             }
         } catch(\Exception $e){
@@ -167,7 +165,7 @@ class IndexController extends Controller{
             case Wechat::MSG_TYPE_TEXT:
                 switch ($data['Content']) {
                     case '文本':
-                        $wechat->replyText('欢迎访问中亚通茂股份公众平台，这是文本回复的内容！');
+                       // $wechat->replyText('欢迎访问中亚通茂股份公众平台，这是文本回复的内容！');
                         break;
 
                     case '图片':
@@ -219,10 +217,9 @@ class IndexController extends Controller{
 
                         $wechat->replyNews($news, $news, $news, $news, $news);
                         break;
-                    
                     default:
 						//计划连接到图灵机器人进行处理
-                        $wechat->replyText("欢迎访问中亚通茂股份公众平台！您输入的内容是：{$data['Content']}");
+                        //$wechat->replyText("欢迎访问中亚通茂股份公众平台！您输入的内容是：{$data['Content']}");
                         break;
                 }
                 break;

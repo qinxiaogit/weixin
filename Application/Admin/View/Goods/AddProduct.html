@@ -15,6 +15,11 @@
 	<input class="form-control" id="goods_info" name="goods_simple" type="text"/>
 	<label>产品预览图</label>
 	<input class="form-control" name="goods_image" type="file"/>
+	<div class="checkbox">
+    <label>
+      <input type="checkbox" name="ts_station"> 推送给用户
+    </label>
+    </div>
 	<label>产品描述信息</label>
 	<textarea id="container" name="goods_priview_html"></textarea>
 	<input class="form-control btn-primary" type="submit" value="确认添加"/>
@@ -30,7 +35,7 @@
    //编辑器实例
    var ue = UE.getEditor('container', {
 		"initialFrameWidth" : "100%",   // 宽
-		"initialFrameHeight" :"200px",  // 高
+		"initialFrameHeight" :"150px",  // 高
 		"maximumWords" : 100000    
 	});
 </script>
