@@ -1,0 +1,1162 @@
+[ 2016-05-03T10:21:57+08:00 ] ::1 /weixin/admin.php/Index/CheckLoginfo.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.062400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' C:\web\www\weixin\Application\Runtime\Cache\Admin\bd9b8d03de00060392cf6ce0071342b9.php 第 65 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.093600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.093600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015600s ]
+
+[ 2016-05-03T10:21:59+08:00 ] ::1 /weixin/admin.php/Index.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2016-05-03T10:21:59+08:00 ] ::1 /weixin/admin.php/Index/Verify.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:22:09+08:00 ] ::1 /weixin/admin.php/Index/CheckLoginfo.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.2340s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' C:\web\www\weixin\Application\Runtime\Cache\Admin\bd9b8d03de00060392cf6ce0071342b9.php 第 65 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:22:11+08:00 ] ::1 /weixin/admin.php/Home.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0312s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: main_menu C:\web\www\weixin\Application\Runtime\Cache\Admin\22e1ae56de7cd2188a6c84240f3a78b7.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062400s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062400s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:22:14+08:00 ] ::1 /weixin/admin.php/User/index.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: main_menu C:\web\www\weixin\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:22:31+08:00 ] ::1 /weixin/admin.php/User/AddManage.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="tx@qq.com" )  [ RunTime:0.0000s ]
+SQL: INSERT INTO `zytm_manage_user` (`manage_name`,`manage_role`,`manage_email`,`manage_passwd`,`manage_create_date`,`manage_update_date`) VALUES ('tx','-1','tx@qq.com','e680db9b245cfdf970f50a912e0901b5','1462242151','1462242151') [ RunTime:0.0468s ]
+
+[ 2016-05-03T10:22:34+08:00 ] ::1 /weixin/admin.php/User/AddManage.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="tx@qq.com" )  [ RunTime:0.0000s ]
+
+[ 2016-05-03T10:22:34+08:00 ] ::1 /weixin/admin.php/User/AddManage.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="tx@qq.com" )  [ RunTime:0.0000s ]
+
+[ 2016-05-03T10:22:34+08:00 ] ::1 /weixin/admin.php/User/AddManage.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="tx@qq.com" )  [ RunTime:0.0000s ]
+
+[ 2016-05-03T10:22:35+08:00 ] ::1 /weixin/admin.php/User/AddManage.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0156s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="tx@qq.com" )  [ RunTime:0.0000s ]
+
+[ 2016-05-03T10:22:35+08:00 ] ::1 /weixin/admin.php/User/AddManage.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="tx@qq.com" )  [ RunTime:0.0000s ]
+
+[ 2016-05-03T10:22:35+08:00 ] ::1 /weixin/admin.php/User/AddManage.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="tx@qq.com" )  [ RunTime:0.0000s ]
+
+[ 2016-05-03T10:22:36+08:00 ] ::1 /weixin/admin.php/User/AddManage.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="tx@qq.com" )  [ RunTime:0.0000s ]
+
+[ 2016-05-03T10:22:36+08:00 ] ::1 /weixin/admin.php/User/AddManage.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="tx@qq.com" )  [ RunTime:0.0156s ]
+
+[ 2016-05-03T10:22:36+08:00 ] ::1 /weixin/admin.php/User/AddManage.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="tx@qq.com" )  [ RunTime:0.0000s ]
+
+[ 2016-05-03T10:22:36+08:00 ] ::1 /weixin/admin.php/User/AddManage.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="tx@qq.com" )  [ RunTime:0.0000s ]
+
+[ 2016-05-03T10:22:37+08:00 ] ::1 /weixin/admin.php/User/AddManage.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="tx@qq.com" )  [ RunTime:0.0000s ]
+
+[ 2016-05-03T10:22:37+08:00 ] ::1 /weixin/admin.php/User/AddManage.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="tx@qq.com" )  [ RunTime:0.0000s ]
+
+[ 2016-05-03T10:22:37+08:00 ] ::1 /weixin/admin.php/User/AddManage.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="tx@qq.com" )  [ RunTime:0.0000s ]
+
+[ 2016-05-03T10:22:39+08:00 ] ::1 /weixin/admin.php/User/index.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: main_menu C:\web\www\weixin\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:22:47+08:00 ] ::1 /weixin/admin.php/User/EditUserInfo.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\ProductMenuModel::getAuthId(), called in C:\web\www\weixin\Application\Admin\Controller\UserController.class.php on line 59 and defined C:\web\www\weixin\Application\Admin\Model\ProductMenuModel.class.php 第 52 行.
+SQL: SELECT * FROM `zytm_product_menu`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: main_menu C:\web\www\weixin\Application\Runtime\Cache\Admin\57bf4f96ffbb2164fb6ccebf15538bc2.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:22:51+08:00 ] ::1 /weixin/admin.php/User/EditUserInfoToDb.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="0@qq.com" )  [ RunTime:0.0000s ]
+
+[ 2016-05-03T10:22:58+08:00 ] ::1 /weixin/admin.php/User/EditUserInfoToDb.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="tx@qq.com" )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_role="0" )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_name="天线" )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: UserPassWd C:\web\www\weixin\Application\Admin\Controller\UserController.class.php 第 102 行.
+SQL: UPDATE `zytm_manage_user` SET `manage_role`='1',`manage_passwd`='74be16979710d4c4e7c6647856088456',`manage_update_date`='1462242178' WHERE ( manage_email="tx@qq.com" ) [ RunTime:0.0156s ]
+
+[ 2016-05-03T10:23:00+08:00 ] ::1 /weixin/admin.php/User/index.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: main_menu C:\web\www\weixin\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:23:10+08:00 ] ::1 /weixin/admin.php/User/index.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: main_menu C:\web\www\weixin\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-03T10:23:17+08:00 ] ::1 /weixin/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-03T10:23:17+08:00 ] ::1 /weixin/admin.php/Index/Verify.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-03T10:23:30+08:00 ] ::1 /weixin/admin.php/Index/CheckLoginfo.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = 'tx@qq.com' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' C:\web\www\weixin\Application\Runtime\Cache\Admin\bd9b8d03de00060392cf6ce0071342b9.php 第 65 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:23:31+08:00 ] ::1 /weixin/admin.php/Index.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-03T10:23:31+08:00 ] ::1 /weixin/admin.php/Index/Verify.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-03T10:25:51+08:00 ] ::1 /weixin/admin.php/User/AddManage.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="rj@qq.com" )  [ RunTime:0.0000s ]
+SQL: INSERT INTO `zytm_manage_user` (`manage_name`,`manage_role`,`manage_email`,`manage_passwd`,`manage_create_date`,`manage_update_date`) VALUES ('rj','-1','rj@qq.com','543faaedea33ec951b7ca61af49afb59','1462242351','1462242351') [ RunTime:0.0000s ]
+
+[ 2016-05-03T10:25:53+08:00 ] ::1 /weixin/admin.php/User/AddManage.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="rj@qq.com" )  [ RunTime:0.0000s ]
+
+[ 2016-05-03T10:25:54+08:00 ] ::1 /weixin/admin.php/User/index.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: main_menu C:\web\www\weixin\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:25:59+08:00 ] ::1 /weixin/admin.php/Index.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:25:59+08:00 ] ::1 /weixin/admin.php/Index/Verify.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:26:10+08:00 ] ::1 /weixin/admin.php/Index/CheckLoginfo.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = 'rj@qq.com' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' C:\web\www\weixin\Application\Runtime\Cache\Admin\bd9b8d03de00060392cf6ce0071342b9.php 第 65 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:26:11+08:00 ] ::1 /weixin/admin.php/Home.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = 'rj@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: main_menu C:\web\www\weixin\Application\Runtime\Cache\Admin\22e1ae56de7cd2188a6c84240f3a78b7.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:26:35+08:00 ] ::1 /weixin/admin.php/User/index.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = 'rj@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.015600s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.015600s ]
+NOTIC: [8] Undefined variable: main_menu C:\web\www\weixin\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:28:05+08:00 ] ::1 /weixin/admin.php/User/EditUserInfo.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = 'rj@qq.com' )  [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\ProductMenuModel::getAuthId(), called in C:\web\www\weixin\Application\Admin\Controller\UserController.class.php on line 59 and defined C:\web\www\weixin\Application\Admin\Model\ProductMenuModel.class.php 第 52 行.
+SQL: SELECT * FROM `zytm_product_menu`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: main_menu C:\web\www\weixin\Application\Runtime\Cache\Admin\57bf4f96ffbb2164fb6ccebf15538bc2.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:28:17+08:00 ] ::1 /weixin/admin.php/User/EditUserInfoToDb.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = 'rj@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="rj@qq.com" )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_role="0" )  [ RunTime:0.0000s ]
+
+[ 2016-05-03T10:29:13+08:00 ] ::1 /weixin/admin.php/User/index.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = 'rj@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0156s ]
+SQL: SELECT * FROM `zytm_manage_user`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: main_menu C:\web\www\weixin\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:29:15+08:00 ] ::1 /weixin/admin.php/User/EditUserInfo.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = 'rj@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\ProductMenuModel::getAuthId(), called in C:\web\www\weixin\Application\Admin\Controller\UserController.class.php on line 59 and defined C:\web\www\weixin\Application\Admin\Model\ProductMenuModel.class.php 第 52 行.
+SQL: SELECT * FROM `zytm_product_menu`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: main_menu C:\web\www\weixin\Application\Runtime\Cache\Admin\57bf4f96ffbb2164fb6ccebf15538bc2.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:29:22+08:00 ] ::1 /weixin/admin.php/User/EditUserInfoToDb.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = 'rj@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="rj@qq.com" )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_role="0" )  [ RunTime:0.0000s ]
+
+[ 2016-05-03T10:29:29+08:00 ] ::1 /weixin/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:29:29+08:00 ] ::1 /weixin/admin.php/Index/Verify.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:29:49+08:00 ] ::1 /weixin/admin.php/Index/CheckLoginfo.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' C:\web\www\weixin\Application\Runtime\Cache\Admin\bd9b8d03de00060392cf6ce0071342b9.php 第 65 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:29:50+08:00 ] ::1 /weixin/admin.php/Home.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: main_menu C:\web\www\weixin\Application\Runtime\Cache\Admin\22e1ae56de7cd2188a6c84240f3a78b7.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:29:52+08:00 ] ::1 /weixin/admin.php/Goods/CheckProductInfo.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_goods` [ RunTime:0.0312s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in C:\web\www\weixin\Application\Admin\Model\GoodsModel.class.php on line 10 and defined C:\web\www\weixin\ThinkPHP\Library\Think\Model.class.php 第 2002 行.
+NOTIC: [8] Undefined variable: where C:\web\www\weixin\ThinkPHP\Library\Think\Model.class.php 第 2011 行.
+NOTIC: [8] Undefined variable: where C:\web\www\weixin\ThinkPHP\Library\Think\Model.class.php 第 2014 行.
+NOTIC: [8] Undefined variable: where C:\web\www\weixin\ThinkPHP\Library\Think\Model.class.php 第 2022 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zytm_goods` LIMIT 1   [ RunTime:0.0780s ]
+SQL: SELECT * FROM `zytm_goods` LIMIT 0,10   [ RunTime:0.0312s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: main_menu C:\web\www\weixin\Application\Runtime\Cache\Admin\59e4bb8e753a67b0fdf935e51cd86555.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2016-05-03T10:29:53+08:00 ] ::1 /weixin/admin.php/User/index.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: main_menu C:\web\www\weixin\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:29:56+08:00 ] ::1 /weixin/admin.php/User/EditUserInfo.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\ProductMenuModel::getAuthId(), called in C:\web\www\weixin\Application\Admin\Controller\UserController.class.php on line 59 and defined C:\web\www\weixin\Application\Admin\Model\ProductMenuModel.class.php 第 52 行.
+SQL: SELECT * FROM `zytm_product_menu`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: main_menu C:\web\www\weixin\Application\Runtime\Cache\Admin\57bf4f96ffbb2164fb6ccebf15538bc2.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:30:03+08:00 ] ::1 /weixin/admin.php/User/EditUserInfoToDb.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="rj@qq.com" )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_role="0" )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_name="天线" )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: UserPassWd C:\web\www\weixin\Application\Admin\Controller\UserController.class.php 第 102 行.
+SQL: UPDATE `zytm_manage_user` SET `manage_role`='1',`manage_passwd`='74be16979710d4c4e7c6647856088456',`manage_update_date`='1462242603' WHERE ( manage_email="rj@qq.com" ) [ RunTime:0.0000s ]
+
+[ 2016-05-03T10:33:55+08:00 ] ::1 /weixin/admin.php/User/EditUserInfo.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\ProductMenuModel::getAuthId(), called in C:\web\www\weixin\Application\Admin\Controller\UserController.class.php on line 59 and defined C:\web\www\weixin\Application\Admin\Model\ProductMenuModel.class.php 第 52 行.
+SQL: SELECT * FROM `zytm_product_menu`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: main_menu C:\web\www\weixin\Application\Runtime\Cache\Admin\57bf4f96ffbb2164fb6ccebf15538bc2.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:34:00+08:00 ] ::1 /weixin/admin.php/User/EditUserInfoToDb.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="rj@qq.com" )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_role="0" )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_name="天线" )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: UserPassWd C:\web\www\weixin\Application\Admin\Controller\UserController.class.php 第 101 行.
+SQL: UPDATE `zytm_manage_user` SET `manage_role`='1',`manage_passwd`='74be16979710d4c4e7c6647856088456',`manage_update_date`='1462242840' WHERE ( manage_email="rj@qq.com" ) [ RunTime:0.0000s ]
+
+[ 2016-05-03T10:37:12+08:00 ] ::1 /weixin/admin.php/User/EditUserInfoToDb.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = '0@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email="rj@qq.com" )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_role="0" )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_name="天线" )  [ RunTime:0.0000s ]
+SQL: UPDATE `zytm_manage_user` SET `manage_role`='1',`manage_passwd`='543faaedea33ec951b7ca61af49afb59',`manage_update_date`='1462243032' WHERE ( manage_email="rj@qq.com" ) [ RunTime:0.0000s ]
+
+[ 2016-05-03T10:37:23+08:00 ] ::1 /weixin/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2016-05-03T10:37:23+08:00 ] ::1 /weixin/admin.php/Index/Verify.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:37:34+08:00 ] ::1 /weixin/admin.php/Index/CheckLoginfo.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = 'rj@qq.com' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant HTTP_HOST - assumed 'HTTP_HOST' C:\web\www\weixin\Application\Runtime\Cache\Admin\bd9b8d03de00060392cf6ce0071342b9.php 第 65 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:37:35+08:00 ] ::1 /weixin/admin.php/Home.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = 'rj@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: main_menu C:\web\www\weixin\Application\Runtime\Cache\Admin\22e1ae56de7cd2188a6c84240f3a78b7.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:41:06+08:00 ] ::1 /weixin/admin.php/User/EditUserInfo.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = 'rj@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\ProductMenuModel::getAuthId(), called in C:\web\www\weixin\Application\Admin\Controller\UserController.class.php on line 59 and defined C:\web\www\weixin\Application\Admin\Model\ProductMenuModel.class.php 第 52 行.
+SQL: SELECT * FROM `zytm_product_menu`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: main_menu C:\web\www\weixin\Application\Runtime\Cache\Admin\57bf4f96ffbb2164fb6ccebf15538bc2.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-03T10:41:09+08:00 ] ::1 /weixin/admin.php/User/index.xhtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zytm_manage_user` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `zytm_manage_user` WHERE ( manage_email = 'rj@qq.com' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `zytm_product_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_product_menu` WHERE ( goods_prev_id=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `zytm_manage_user`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: main_menu C:\web\www\weixin\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

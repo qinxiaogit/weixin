@@ -72,6 +72,7 @@ function alterAuth(){
 		success:function(callbackdata){
 			console.log(callbackdata);
 			if(callbackdata.RequstStation){
+				
 				$('#AuthEditInfo').html('<span style="color:green;">'+callbackdata.RequstInfo+'</span>');
 			}else{
 				$('#AuthEditInfo').html('<span style="color:red;">'+callbackdata.RequstInfo+'</span>');

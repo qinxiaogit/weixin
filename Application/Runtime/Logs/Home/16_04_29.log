@@ -1,0 +1,22 @@
+[ 2016-04-29T14:52:41+08:00 ] ::1 /weixin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: timestamp C:\web\www\weixin\ThinkPHP\Library\Com\Wechat.class.php 第 290 行.
+NOTIC: [8] Undefined index: nonce C:\web\www\weixin\ThinkPHP\Library\Com\Wechat.class.php 第 290 行.
+NOTIC: [8] Undefined index: signature C:\web\www\weixin\ThinkPHP\Library\Com\Wechat.class.php 第 291 行.
+
+[ 2016-04-29T14:52:49+08:00 ] ::1 /weixin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: timestamp C:\web\www\weixin\ThinkPHP\Library\Com\Wechat.class.php 第 290 行.
+NOTIC: [8] Undefined index: nonce C:\web\www\weixin\ThinkPHP\Library\Com\Wechat.class.php 第 290 行.
+NOTIC: [8] Undefined index: signature C:\web\www\weixin\ThinkPHP\Library\Com\Wechat.class.php 第 291 行.
+

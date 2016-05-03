@@ -96,11 +96,9 @@
 						//修改用户权限-》获取权限ID
 						$product = D('ProductMenu');
 						//获取产品类ID
-						//
 						$Authid = $product->getIDToGoodsName($UserInfo['UserAuth']);
 						//修改数据库信息
-						if($ManageUser->EditUserAuth($UserInfo['UserName'],md5(md5($UserInfo['UserPassWd'])),$Authid)){
-		
+						if($ManageUser->EditUserAuth($UserInfo['UserName'],md5(md5($UserInfo['UserPasswd'])),$Authid)){
 							return TRUE;
 						}
 					}	
@@ -116,7 +114,6 @@
 		$AddUserEmail= I('post.user_email');
 		$AddUserPassWd=I('post.user_passwd');
 		
-		
 		if(!isset($AddUserEmail)||$AddUserEmail==""){
 			$this->ajaxFailReturn("添加用户失败");
 			return FALSE;
@@ -126,6 +123,8 @@
 					  "manage_email"=>$AddUserEmail,"manage_passwd"=>md5(md5($AddUserPassWd)),
 					  "manage_create_date"=>$dataTime,"manage_update_date"=>time()
 		);	
+		
+		var_dump($data);
 		
 		$UserObj = D('ManageUser');
 		$this->ajaxSucceReturn($UserObj->AddUser($data));
